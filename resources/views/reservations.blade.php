@@ -19,6 +19,7 @@
 
       <a href="#" class="button">Boka speltid</a>
 
+      @if($futureResesrvations->count())
       <div class="bokade-tider">
         <h4>Bokade tider 2016</h4>
         <div class="hr"></div>
@@ -35,7 +36,13 @@
           <div class="hr2"></div>
         @endforeach
       </div>
-
+      @else
+        <div class="bokade-tider">
+          <h4>Bokade tider 2016</h4>
+          <h5>Det finns inga bokade tider</h5>
+        </div>
+      @endif
+     @if($oldResesrvations->count())
      <div class="bokade-tider">
        <h4>Historik: </h4>
        <div class="hr"></div>
@@ -52,7 +59,12 @@
          <div class="hr2"></div>
        @endforeach
      </div>
-
+     @else
+      <div class="bokade-tider">
+        <h4>Historik</h4>
+        <h5>Det finns inga bokade tider i historiken</h5>
+      </div>
+     @endif
       <!-- Modal -->
 
       <div class="modal">
