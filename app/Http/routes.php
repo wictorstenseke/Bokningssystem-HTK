@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/reservations', 'ReservationController@index');
+
+Route::get('/reservation/{$id}', 'ReservationController@blaha');

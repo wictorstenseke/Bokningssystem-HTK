@@ -1,5 +1,7 @@
 <?php
 
+use Carbon\Carbon;
+
 /*
 |--------------------------------------------------------------------------
 | Model Factories
@@ -11,11 +13,28 @@
 |
 */
 
-$factory->define(App\User::class, function (Faker\Generator $faker) {
+// $factory->define(App\User::class, function (Faker\Generator $faker) {
+//     return [
+//         'name' => $faker->name,
+//         'email' => $faker->safeEmail,
+//         'password' => bcrypt(str_random(10)),
+//         'remember_token' => str_random(10),
+//     ];
+// });
+
+
+
+$factory->define(App\Reservation::class, function (Faker\Generator $faker) {
+
+    $faker = Faker\Factory::create("sv_SE");
+
+    $year   = Carbon::now()->year;
+    $start  = Carbon::create($year, rand(1, 12), rand(1, 28), rand(1, 24));
+    $stop   = clone $start;
+
     return [
-        'name' => $faker->name,
-        'email' => $faker->safeEmail,
-        'password' => bcrypt(str_random(10)),
-        'remember_token' => str_random(10),
+        'start' => $start,
+        'stop'  => $stop->addHours(rand(1,4)),
+        'name'  => $faker->name,
     ];
 });
