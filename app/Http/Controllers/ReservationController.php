@@ -58,7 +58,7 @@ class ReservationController extends Controller
      */
     public function show($id)
     {
-        //
+        return $id;
     }
 
     /**
@@ -90,11 +90,10 @@ class ReservationController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function blaha(Request $request)
+    public function softDelete(Reservation $reservation)
     {
-        return $request;
-        $reservation = Reservation::findOrFail($id);
-        return $reservation;
+        $reservation->delete();
+        return redirect()->back();
     }
 
     /**

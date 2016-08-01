@@ -29,7 +29,7 @@
               -
               {{ $reservation->stop->format('H:i') }}
               <strong>{{ $reservation->name }}</strong>
-              <a href="{{ action('ReservationController@show', ['id' => $reservation->id]) }}"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+              <a href="{{ route('reservation.softDelete', ['id' => $reservation->id]) }}"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
             </p>
           </div>
           <div class="hr2"></div>
@@ -46,7 +46,7 @@
               -
               {{ $reservation->stop->format('H:i') }}
               <strong>{{ $reservation->name }}</strong>
-              <a href="{{ action('ReservationController@show', ['id' => $reservation->id]) }}"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+              <a href="{{ route('reservation.softDelete', ['id' => $reservation->id]) }}"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
             </p>
          </div>
          <div class="hr2"></div>
