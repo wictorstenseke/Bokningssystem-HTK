@@ -2,6 +2,7 @@
 <html>
     <head>
       <meta charset="UTF-8">
+      <meta name="_token" content="{{ csrf_token() }}" />
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700' rel='stylesheet' type='text/css'>
       <title>Boka banan | Högelids Tennisklubb</title>
@@ -28,7 +29,7 @@
               -
               {{ $reservation->stop->format('H:i') }}
               <strong>{{ $reservation->name }}</strong>
-              <a href="{{ action('ReservationController@blaha', ['id' => $reservation->id]) }}"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+              <a href="{{ action('ReservationController@show', ['id' => $reservation->id]) }}"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
             </p>
           </div>
           <div class="hr2"></div>
@@ -45,7 +46,7 @@
               -
               {{ $reservation->stop->format('H:i') }}
               <strong>{{ $reservation->name }}</strong>
-              <a href="{{ action('ReservationController@blaha', ['id' => $reservation->id]) }}"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+              <a href="{{ action('ReservationController@show', ['id' => $reservation->id]) }}"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
             </p>
          </div>
          <div class="hr2"></div>
