@@ -74,7 +74,8 @@
            Avboka speltiden vid förhinder. Detta görs på startsidan genom att trycka på soptunnan.
          </p>
 
-           <form action="">
+           <form action="{{ route('reservation.store') }}" method="POST">
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <input type="text" name="date" placeholder="När vill du spela?" required>
             <p class="input-beskrivning">Tillexempel: 31 juli 12:00</p>
             <br>

@@ -17,4 +17,7 @@ Route::get('/', function () {
 
 Route::get('/reservations', 'ReservationController@index');
 
+
+Route::resource('/reservation', 'ReservationController');
+
 Route::get('/reservation/{reservation}', 'ReservationController@softDelete')->name('reservation.softDelete');
