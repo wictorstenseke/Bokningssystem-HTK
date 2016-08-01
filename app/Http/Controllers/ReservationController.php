@@ -17,13 +17,16 @@ class ReservationController extends Controller
     public function index()
     {
         $reservations = Reservation::all();
+
         $futureResesrvations = $reservations->filter(function ($reservation){
             return $reservation->start > Carbon::now();
         })->sortBy('start');
+
         $oldResesrvations = $reservations->filter(function ($reservation){
             return $reservation->start < Carbon::now();
-        })->sortBy('start');
-        return view('reservations')->with([
+        })->sortByDesc('start');
+
+        return view('index')->with([
             'futureResesrvations'   => $futureResesrvations,
             'oldResesrvations'      => $oldResesrvations,
         ]);

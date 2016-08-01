@@ -26,7 +26,7 @@
       @foreach($futureResesrvations as $reservation)
         <div class="bokad-tid">
           <p>
-            {{ $reservation->start->format('d-m H:i') }}
+            {{ $reservation->start->formatLocalized('%d %B %H:%M') }}
             -
             {{ $reservation->stop->format('H:i') }}
             <strong>{{ $reservation->name }}</strong>
@@ -49,7 +49,8 @@
       @foreach($oldResesrvations as $reservation)
         <div class="bokad-tid">
           <p>
-            {{ $reservation->start->format('Y-m-d H:i') }}
+            {{ $reservation->start->diffForHumans() }}
+            {{ $reservation->start->format('H:i') }}
             -
             {{ $reservation->stop->format('H:i') }}
             <strong>{{ $reservation->name }}</strong>
