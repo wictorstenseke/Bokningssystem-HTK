@@ -237,7 +237,7 @@ a {
   background-color: #1e5d32; }
 
 .reservation-modal {
-  display: none;
+  display: block;
   position: relative;
   margin: 25px auto;
   text-align: center;
