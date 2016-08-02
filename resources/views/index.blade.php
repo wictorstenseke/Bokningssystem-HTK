@@ -51,7 +51,7 @@
       @foreach($futureResesrvations as $reservation)
         <div class="bokad-tid">
           <p>
-            {{ $reservation->start->formatLocalized('%d %b %H:%M') }}
+            {{ $reservation->start->formatLocalized('%e %b %H:%M') }}
             -
             {{ $reservation->stop->format('H:i') }}
             <strong>{{ $reservation->name }}</strong>
