@@ -422,7 +422,7 @@ jQuery.easing._dd_easing = function(x, t, b, c, d) {
                         var mn = [
                             "Januari",
                             "Februari",
-                            "March",
+                            "Mars",
                             "April",
                             "Maj",
                             "Juni",
