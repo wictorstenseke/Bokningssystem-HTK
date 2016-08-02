@@ -19,6 +19,24 @@
 
   <a href="#" class="button">Boka speltid</a>
 
+  <!-- Modal -->
+  <div class="modal">
+    <i class="close-btn fa fa-times"></i>
+    <p>Fyll i uppgifterna nedan för att boka speltid.
+      En bokning avser två timmar speltid.
+      Avboka speltiden vid förhinder. Detta görs på startsidan genom att trycka på soptunnan.
+    </p>
+
+    <form action="{{ route('reservation.store') }}" method="POST">
+      <input type="hidden" name="_token" value="{{ csrf_token() }}">
+      <input type="text" name="date" placeholder="När vill du spela?" required>
+      <p class="input-beskrivning">Tillexempel: 31 juli 12:00</p>
+      <br>
+      <input type="text" name="name" placeholder="Skriv ditt namn">
+      <input type="submit" value="Boka speltid" class="modal-button">
+    </form>
+  </div>
+
   @if($futureResesrvations->count())
     <div class="bokade-tider">
       <h4>Bokade tider 2016</h4>
@@ -66,25 +84,6 @@
       <h5>Det finns inga bokade tider i historiken</h5>
     </div>
   @endif
-  <!-- Modal -->
-
-  <div class="modal">
-    <i class="close-btn fa fa-times"></i>
-    <p>Fyll i uppgifterna nedan för att boka speltid.
-      En bokning avser två timmar speltid.
-      Avboka speltiden vid förhinder. Detta görs på startsidan genom att trycka på soptunnan.
-    </p>
-
-    <form action="{{ route('reservation.store') }}" method="POST">
-      <input type="hidden" name="_token" value="{{ csrf_token() }}">
-      <input type="text" name="date" placeholder="När vill du spela?" required>
-      <p class="input-beskrivning">Tillexempel: 31 juli 12:00</p>
-      <br>
-      <input type="text" name="name" placeholder="Skriv ditt namn">
-      <input type="submit" value="Boka speltid" class="modal-button">
-    </form>
-
-  </div>
 
   <script src="js/jquery-2.2.4.min.js"></script>
   <script src="js/functions.js"></script>

@@ -82,17 +82,13 @@ a
 
   display: block
   +transition(all, 0.3s)
-  pointer-events: none
-
+  position: relative
   text-align: center
-  position: absolute
-  top: 450px
-  opacity: 0
-  left: 0px
   background-color: $main-green
   margin: 25px auto
-  width: 100%
-  padding: 20px 0 70px 0
+  max-width: 720px
+  border-radius: 10px
+  padding: 20px 0 20px 0
   color: $white
   .input-beskrivning
     font-size: 13px
@@ -110,10 +106,6 @@ a
     padding: 0 10px 0 10px
     margin: 35px auto 0 auto
     text-align: center
-
-.modal-show
-  opacity: 1
-  top: 220px
 
 input
   background-color: $main-green
@@ -171,16 +163,3 @@ input:-ms-input-placeholder
   .bokade-tider
     p
       font-size: 16px
-
-  .modal-show
-    top: 160px
-
-@media screen and (max-width: 568px)
-  .modal-show
-    top: 160px
-@media screen and (max-width: 458px)
-  .modal-show
-    top: 170px
-@media screen and (max-width: 320px)
-  .modal-show
-    top: 190px
