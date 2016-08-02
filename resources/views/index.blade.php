@@ -11,8 +11,6 @@
   <link rel="stylesheet" href="css/timedropper.css" type="text/css">
   <link rel="stylesheet" href="css/datedropper.css" type="text/css">
 
-  <script src="js/datedropper.js"></script>
-  <script src="js/timedropper.js"></script>
   <script src="https://use.fontawesome.com/5cafce8111.js"></script>
 </head>
 <body>
@@ -34,10 +32,14 @@
 
     <form action="{{ route('reservation.store') }}" method="POST">
       <input type="hidden" name="_token" value="{{ csrf_token() }}">
-      <input type="text" id="departure" name="date" placeholder="När vill du spela?" required>
-      <p class="input-beskrivning">Tillexempel: 31 juli 12:00</p>
+      <input type="text" id="date" name="date" placeholder="När vill du spela?" required>
+      <br>
+      <input type="text" id="start" placeholder="Vilken tid vill du spela?">
+      <br>
+      <input type="text" id="stop" placeholder="Vilken tid tänkte du sluta spela?">
       <br>
       <input type="text" name="name" placeholder="Skriv ditt namn">
+      <br>
       <input type="submit" value="Bekräfta bokning" class="submit-button">
     </form>
   </div>
@@ -92,6 +94,12 @@
 
   <script src="js/jquery-2.2.4.min.js"></script>
   <script src="js/functions.js"></script>
-  <script>$( "#departure" ).dateDropper();</script>
+  <script src="js/datedropper.js"></script>
+  <script src="js/timedropper.js"></script>
+  <script>
+    $( "#date" ).dateDropper();
+    $( "#start" ).timeDropper();
+    $( "#stop" ).timeDropper();
+  </script>
 </body>
 </html>
