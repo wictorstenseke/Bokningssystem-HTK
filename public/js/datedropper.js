@@ -59,37 +59,37 @@ jQuery.easing._dd_easing = function(x, t, b, c, d) {
                     _dd_event = null,
 					_dd_init_state = false,
 					_dd_buffer = false;
-					
+
 				var _dd_color = function (col, amt) {
-  
+
 					var usePound = false;
-				  
+
 					if (col[0] == "#") {
 						col = col.slice(1);
 						usePound = true;
 					}
-				 
+
 					var num = parseInt(col,16);
-				 
+
 					var r = (num >> 16) + amt;
-				 
+
 					if (r > 255) r = 255;
 					else if  (r < 0) r = 0;
-				 
+
 					var b = ((num >> 8) & 0x00FF) + amt;
-				 
+
 					if (b > 255) b = 255;
 					else if  (b < 0) b = 0;
-				 
+
 					var g = (num & 0x0000FF) + amt;
-				 
+
 					if (g > 255) g = 255;
 					else if (g < 0) g = 0;
-				 
+
 					return (usePound?"#":"") + (g | (b << 8) | (r << 16)).toString(16);
-				  
+
 				};
-				
+
 				var _dd_c_invert = function (hexTripletColor) {
 					var color = hexTripletColor;
 					color = color.substring(1);           // remove #
@@ -158,7 +158,7 @@ jQuery.easing._dd_easing = function(x, t, b, c, d) {
                             'Sabato'
                         ];
                         break;
-                        //hungarian	
+                        //hungarian
                     case 'hu':
                         var mn = [
                             "január",
@@ -418,6 +418,31 @@ jQuery.easing._dd_easing = function(x, t, b, c, d) {
                             'sobota'
                         ];
                         break;
+                    case 'sv':
+                        var mn = [
+                            "Januari",
+                            "Februari",
+                            "March",
+                            "April",
+                            "Maj",
+                            "Juni",
+                            "Juli",
+                            "Augusti",
+                            "September",
+                            "Oktober",
+                            "November",
+                            "December"
+                        ];
+                        var dn = [
+                            'Söndag',
+                            'Måndag',
+                            'Tisdag',
+                            'Onsdag',
+                            'Torsdag',
+                            'Fredag',
+                            'Lördag'
+                        ];
+                        break;
                         //ukrainian
                     case 'uk':
                         var mn = [
@@ -496,7 +521,7 @@ jQuery.easing._dd_easing = function(x, t, b, c, d) {
                             'Cumartesi'
                         ];
                         break;
-                        //korean	
+                        //korean
                     case 'ko':
                         var mn = [
                             "1월",
@@ -548,7 +573,7 @@ jQuery.easing._dd_easing = function(x, t, b, c, d) {
                             'Lauantai'
                         ];
                         break;
-                        //english	
+                        //english
                     default:
                         var mn = [
                             "January",
@@ -647,28 +672,28 @@ jQuery.easing._dd_easing = function(x, t, b, c, d) {
                         _dd.find('.dd-s-b-d li[data-id="' + _dd_d + '"],.dd-s-b-m li[data-id="' + _dd_m + '"],.dd-s-b-s-y li[data-id="' + _dd_y + '"],.dd-s-b-y li[data-id="' + _dd_sub_y + '"]').addClass('dd-on');
 
                         if (!_dd_settings.animate) {
-							
+
 							setTimeout(function(){
-								
+
 								_dd.find('.dd-d .dd-ul').scrollLeft(_dd.find('.dd-d li[data-id="' + _dd_d + '"]').index() * _dd_settings.dropWidth);
 								_dd.find('.dd-m .dd-ul').scrollLeft(_dd.find('.dd-m li[data-id="' + _dd_m + '"]').index() * _dd_settings.dropWidth);
 								_dd.find('.dd-y .dd-ul').scrollLeft(_dd.find('.dd-y li[data-id="' + _dd_y + '"]').index() * _dd_settings.dropWidth);
 								_dd.find('.dd-sub-y .dd-ul').scrollLeft(_dd.find('.dd-sub-y li[data-id="' + _dd_sub_y + '"]').index() * _dd_settings.dropWidth);
-							
+
 							},1);
-							
+
 							if (_dd.hasClass('dd-init')) {
-								
+
 								_dd.removeClass('dd-init');
 								_dd_init_state = true;
 							}
-	
+
                         } else {
 
                             if (_dd.hasClass('dd-init')) {
 
                                 _dd.find('.dd-m .dd-ul').animate({
-									
+
                                     scrollLeft: _dd.find('.dd-m li[data-id="' + _dd_m + '"]').index() * _dd_settings.dropWidth
                                 }, 1200, 'swing');
                                 setTimeout(function() {
@@ -685,7 +710,7 @@ jQuery.easing._dd_easing = function(x, t, b, c, d) {
                                     }, 200);
                                 }, 400);
 
-                                
+
 
                             } else {
 
@@ -710,15 +735,15 @@ jQuery.easing._dd_easing = function(x, t, b, c, d) {
 
                     },
                     _dd_placement = function() {
-						
+
 						/*
-						
+
                         var
                             l1 = _dd_input.offset().top + _dd_input.innerHeight() + _dd.find('.dd-c').innerHeight(),
                             l2 = $(window).scrollTop() + $(window).height(),
                             dd_top,
                             dd_left;
-	
+
                         _dd.removeClass('dd-top dd-bottom');
 
                         if (l1 > l2) {
@@ -728,9 +753,9 @@ jQuery.easing._dd_easing = function(x, t, b, c, d) {
                             dd_top = _dd_input.offset().top + (_dd_input.innerHeight()) - 6;
                             _dd.addClass('dd-bottom');
                         }
-						
+
 						*/
-						
+
 						_dd.addClass('dd-bottom');
 
                         _dd.find('.dd-c').css({
@@ -797,7 +822,7 @@ jQuery.easing._dd_easing = function(x, t, b, c, d) {
                             _dd.hide()
                             _dd.find('.dd-c').removeClass('dd-fadeout');
                         }, 400);
-						
+
 						_dd_input.change();
 
 
@@ -862,27 +887,27 @@ jQuery.easing._dd_easing = function(x, t, b, c, d) {
                                     var
                                         i_max = 12,
                                         _class = 'm';
-										
+
 									for (var i = i_min; i < i_max; i++) {
-	
+
 										_dd_el.find('ul')
 											.append('<li data-id="' + (i + 1) + '">' + mn[i].substr(0, 3) + '<span>' + _dd_0(i + 1) + '</span></li>');
-	
+
 									}
                                 }
                                 if (_dd_el.hasClass('dd-s-b-d')) {
                                     var
                                         i_max = 31,
                                         _class = 'd';
-										
+
 									for (var i = i_min; i < i_max; i++) {
-	
+
 										_dd_el.find('ul')
 											.append('<li data-id="' + (i + 1) + '">' + _dd_0(i + 1) + '<span></span></li>');
 									}
                                 }
 
-                                
+
 
                             }
 
@@ -1072,7 +1097,7 @@ jQuery.easing._dd_easing = function(x, t, b, c, d) {
                             var _detect = function() {
 
                                 if (_dd_init_state) {
-									
+
                                     _d_ps = Math.round(_dd_el.find('.dd-ul').scrollLeft() / _dd_settings.dropWidth);
                                     var value = parseInt(_dd_el.find('li').eq(_d_ps).attr('data-id'));
 
@@ -1080,42 +1105,42 @@ jQuery.easing._dd_easing = function(x, t, b, c, d) {
                                     if (_dd_el.hasClass('dd-m')) _dd_m = value;
                                     if (_dd_el.hasClass('dd-d')) _dd_d = value;
                                     if (_dd_el.hasClass('dd-sub-y')) _dd_sub_y = value;
-	
+
                                 }
 
                             };
 
                             _dd_el.find('.dd-ul').on('scroll', function() {
-								
+
                                 _detect();
-	
+
                             });
-							
+
 							var _dd_user = false;
-							
+
 							_dd_el.find('.dd-ul').on('mousedown touchstart', function() {
-								
+
 								if(!_dd_user) _dd_user = true;
                                 clearInterval(_te_event);
-								
+
 								$(window).on('mouseup touchend touchmove', function() {
-								
+
 									if(_dd_user) {
-									
+
 										clearInterval(_te_event);
 										_te_event = setTimeout(function() {
-											
+
 											_dd_init();
 											_dd_user = false;
-											
+
 										}, 780);
-									
+
 									}
-		
+
 								});
-								
+
                             });
-							
+
                             if (_dd_settings.format == 'Y') _dd.find('.dd-m,.dd-d').hide();
                             if (_dd_settings.format == 'm' || _dd_settings.format == 'n' || _dd_settings.format == 'F' || _dd_settings.format == 'M') _dd.find('.dd-y,.dd-d').hide();
 
@@ -1159,11 +1184,11 @@ jQuery.easing._dd_easing = function(x, t, b, c, d) {
 
                     },
                     _dd_set = function() {
-						
+
 						clearInterval(_dd_event);
 
                         if (_dd.hasClass('dd-init')) {
-							
+
 							_dd_input
 							.attr({
 								'readonly': 'readonly'
@@ -1189,15 +1214,15 @@ jQuery.easing._dd_easing = function(x, t, b, c, d) {
                             _dd_construct();
 
                         }
-						
+
 						_dd.show();
 						_dd_placement();
-						
+
 
                     };
 
                 _dd_input.click(function() {
-					
+
                     _dd_set();
 
                 });
