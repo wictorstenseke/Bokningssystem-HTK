@@ -13,7 +13,7 @@ if (! function_exists('defaultStartTime')) {
     function defaultStartTime($property = null)
     {
         $startTime = Carbon\Carbon::now();
-        $minutes = date('i', strtotime(Carbon\Carbon::now()->addMinutes(10)));
+        $minutes = date('i', strtotime(Carbon\Carbon::now()->addMinutes(4)));
         $roundedMinutes = $minutes - ($minutes % 5);
         return $startTime->format('H') .':'. $roundedMinutes;
     }
@@ -29,7 +29,7 @@ if (! function_exists('defaultStopTime')) {
     function defaultStopTime($property = null)
     {
         $startTime = Carbon\Carbon::now();
-        $minutes = date('i', strtotime(Carbon\Carbon::now()->addMinutes(10)));
+        $minutes = date('i', strtotime(Carbon\Carbon::now()->addMinutes(4)));
         $roundedMinutes = $minutes - ($minutes % 5);
         return $startTime->addHours(2)->format('H') .':'. $roundedMinutes;
     }
