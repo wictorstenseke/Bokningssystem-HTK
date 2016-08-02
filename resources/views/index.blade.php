@@ -135,7 +135,11 @@
   <script src="js/datedropper.js"></script>
   <script src="js/timedropper.js"></script>
   <script>
-    $( "#date" ).dateDropper({lang: 'sv', format: 'Y-m-d'});
+    $( "#date" ).dateDropper({
+      lang: 'sv',
+      format: 'Y-m-d',
+      lock: 'from',
+    });
     $( "#start" ).timeDropper({lang: 'sv', format: 'H:m', minutesInterval: 5});
     $( "#stop" ).timeDropper({lang: 'sv', format: 'H:m', minutesInterval: 5});
   </script>
