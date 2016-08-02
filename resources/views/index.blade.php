@@ -32,11 +32,11 @@
 
     <form action="{{ route('reservation.store') }}" method="POST">
       <input type="hidden" name="_token" value="{{ csrf_token() }}">
-      <input type="text" id="date" name="date" placeholder="När vill du spela?" required>
+      <input type="text" id="date" name="start_date" placeholder="När vill du spela?" required>
       <br>
-      <input type="text" id="start" placeholder="Vilken tid vill du spela?">
+      <input type="text" id="start" name="start_time" placeholder="Vilken tid vill du spela?">
       <br>
-      <input type="text" id="stop" placeholder="Vilken tid tänkte du sluta spela?">
+      <input type="text" id="stop" name="stop_time" placeholder="Vilken tid tänkte du sluta spela?">
       <br>
       <input type="text" name="name" placeholder="Skriv ditt namn">
       <br>
@@ -97,9 +97,9 @@
   <script src="js/datedropper.js"></script>
   <script src="js/timedropper.js"></script>
   <script>
-    $( "#date" ).dateDropper();
-    $( "#start" ).timeDropper();
-    $( "#stop" ).timeDropper();
+    $( "#date" ).dateDropper({lang: 'sv', format: 'Y-m-d'});
+    $( "#start" ).timeDropper({lang: 'sv', format: 'HH:mm'});
+    $( "#stop" ).timeDropper({lang: 'sv', format: 'HH:mm'});
   </script>
 </body>
 </html>
