@@ -8,6 +8,11 @@
   <title>Boka banan | Högelids Tennisklubb</title>
 
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/timedropper.css" type="text/css">
+  <link rel="stylesheet" href="css/datedropper.css" type="text/css">
+
+  <script src="js/datedropper.js"></script>
+  <script src="js/timedropper.js"></script>
   <script src="https://use.fontawesome.com/5cafce8111.js"></script>
 </head>
 <body>
