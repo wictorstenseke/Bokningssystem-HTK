@@ -15,6 +15,7 @@ if (! function_exists('defaultStartTime')) {
         $startTime = Carbon\Carbon::now();
         $minutes = date('i', strtotime(Carbon\Carbon::now()->addMinutes(4)));
         $roundedMinutes = $minutes - ($minutes % 5);
+        $roundedMinutes = (strlen($roundedMinutes) == 1) ? '0'.$roundedMinutes : $roundedMinutes;
         return $startTime->format('H') .':'. $roundedMinutes;
     }
 }
@@ -31,6 +32,7 @@ if (! function_exists('defaultStopTime')) {
         $startTime = Carbon\Carbon::now();
         $minutes = date('i', strtotime(Carbon\Carbon::now()->addMinutes(4)));
         $roundedMinutes = $minutes - ($minutes % 5);
+        $roundedMinutes = (strlen($roundedMinutes) == 1) ? '0'.$roundedMinutes : $roundedMinutes;
         return $startTime->addHours(2)->format('H') .':'. $roundedMinutes;
     }
 }

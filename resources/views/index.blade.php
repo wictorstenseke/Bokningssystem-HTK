@@ -13,6 +13,11 @@
 
   <script src="https://use.fontawesome.com/5cafce8111.js"></script>
 </head>
+<style>
+  .error{
+    border-color: red;
+  }
+</style>
 <body>
   <div class="bildbox">
     <img src="img/htk-logo.svg" alt="" class="logotype">
@@ -30,15 +35,48 @@
       Avboka speltiden vid förhinder. Detta görs på startsidan genom att trycka på soptunnan.
     </p>
 
+    @if ( $errors->any() )
+    <div style="background: red; width: 100%; margin: 15px 0;">
+      @foreach ($errors->all() as $error)
+      {{$error}}<br>
+      @endforeach
+    </div>
+    @endif
+
     <form action="{{ route('reservation.store') }}" method="POST">
       <input type="hidden" name="_token" value="{{ csrf_token() }}">
-      <input type="text" id="date" name="start_date" placeholder="När vill du spela?" required>
+      <input
+        type="text"
+        id="date"
+        name="start_date"
+        class="{{ $errors->has('start_date') ? 'error' : '' }}"
+        placeholder="När vill du spela?"
+      >
       <br>
-      <input type="text" id="start" name="start_time" value="{{ defaultStartTime() }}" placeholder="Vilken tid vill du spela?">
+      <input
+        type="text"
+        id="start"
+        name="start_time"
+        class="{{ $errors->has('start_time') ? 'error' : '' }}"
+        value="{{ defaultStartTime() }}"
+        placeholder="Vilken tid vill du spela?"
+      >
       <br>
-      <input type="text" id="stop" name="stop_time" value="{{ defaultStopTime() }}" placeholder="Vilken tid tänkte du sluta spela?">
+      <input
+        type="text"
+        id="stop"
+        name="stop_time"
+        class="{{ $errors->has('stop_time') ? 'error' : '' }}"
+        value="{{ defaultStopTime() }}"
+        placeholder="Vilken tid tänkte du sluta spela?"
+      >
       <br>
-      <input type="text" name="name" placeholder="Skriv ditt namn">
+      <input
+        type="text"
+        name="name"
+        class="{{ $errors->has('name') ? 'error' : '' }}"
+        placeholder="Skriv ditt namn"
+      >
       <br>
       <input type="submit" value="Bekräfta bokning" class="submit-button">
     </form>

@@ -6,6 +6,7 @@ use Carbon\Carbon;
 use App\Reservation;
 use App\Http\Requests;
 use Illuminate\Http\Request;
+use App\Http\Requests\ReservationRequest;
 
 class ReservationController extends Controller
 {
@@ -48,9 +49,15 @@ class ReservationController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ReservationRequest $request)
     {
-        return $request->all();
+        $createdReservation = Reservation::create([
+            'name'  => $request->name,
+            'start' => Carbon::createFromFormat('Y-m-d H:i', $request->start_date . '' . $request->start_time),
+            'stop'  => Carbon::createFromFormat('Y-m-d H:i', $request->start_date . '' . $request->stop_time),
+        ]);
+
+        return view('success')->with(['createdReservation' => $createdReservation]);
     }
 
     /**
