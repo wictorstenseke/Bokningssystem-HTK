@@ -34,7 +34,7 @@
 
     <form action="{{ route('reservation.store') }}" method="POST">
       <input type="hidden" name="_token" value="{{ csrf_token() }}">
-      <input type="text" name="date" placeholder="När vill du spela?" required>
+      <input type="text" id="departure" name="date" placeholder="När vill du spela?" required>
       <p class="input-beskrivning">Tillexempel: 31 juli 12:00</p>
       <br>
       <input type="text" name="name" placeholder="Skriv ditt namn">
@@ -92,5 +92,6 @@
 
   <script src="js/jquery-2.2.4.min.js"></script>
   <script src="js/functions.js"></script>
+  <script>$( "#departure" ).dateDropper();</script>
 </body>
 </html>
