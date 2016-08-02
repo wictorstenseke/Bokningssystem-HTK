@@ -17,10 +17,10 @@
 
   <p class="intro-text">Välkommen till Högelids Tennisklubb! Här kan du som är medlem boka speltid på vår grusbana och se andra medlemmars bokade tider.</p>
 
-  <a href="#" class="button">Boka speltid</a>
+  <a href="#" class="cta-button">Boka speltid</a>
 
   <!-- Modal -->
-  <div class="modal">
+  <div class="reservation-modal">
     <i class="close-btn fa fa-times"></i>
     <p>Fyll i uppgifterna nedan för att boka speltid.
       En bokning avser två timmar speltid.
@@ -33,7 +33,7 @@
       <p class="input-beskrivning">Tillexempel: 31 juli 12:00</p>
       <br>
       <input type="text" name="name" placeholder="Skriv ditt namn">
-      <input type="submit" value="Boka speltid" class="modal-button">
+      <input type="submit" value="Bekräfta bokning" class="submit-button">
     </form>
   </div>
 

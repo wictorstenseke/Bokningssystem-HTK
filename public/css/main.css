@@ -190,7 +190,7 @@ a {
   margin: 0px auto 25px auto;
   font-size: 16px; }
 
-.button {
+.cta-button {
   padding: 20px 50px;
   background-color: #F1E334;
   display: block;
@@ -201,10 +201,10 @@ a {
   font-size: 20px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   transition: all, 0.2s; }
-  .button:hover {
+  .cta-button:hover {
     box-shadow: 0px 5px 4px 2px rgba(0, 0, 0, 0.1); }
-  .button:active {
-    background-color: #e7d710; }
+  .cta-button:active {
+    background-color: #e2d310; }
 
 .bokade-tider {
   display: block;
@@ -236,32 +236,31 @@ a {
   height: 1px;
   background-color: #1e5d32; }
 
-.modal {
-  display: block;
-  transition: all, 0.3s;
+.reservation-modal {
+  display: none;
   position: relative;
+  margin: 25px auto;
   text-align: center;
   background-color: #194B29;
-  margin: 25px auto;
   max-width: 720px;
+  overflow: hidden;
   border-radius: 10px;
-  padding: 20px 0 20px 0;
   color: #ffffff; }
-  .modal .input-beskrivning {
+  .reservation-modal .input-beskrivning {
     font-size: 13px;
     font-style: italic;
     margin: -10px auto 0 auto; }
-  .modal .close-btn {
+  .reservation-modal .close-btn {
     font-size: 32px;
     position: absolute;
     top: 10px;
     right: 15px;
     cursor: pointer; }
-  .modal p {
+  .reservation-modal p {
     font-size: 15px;
     max-width: 560px;
     padding: 0 10px 0 10px;
-    margin: 35px auto 0 auto;
+    margin: 50px auto 0 auto;
     text-align: center; }
 
 input {
@@ -272,11 +271,11 @@ input {
   padding: 10px;
   max-width: 80%; }
 
-.modal-button {
+.submit-button {
   padding: 20px 50px;
   background-color: #F1E334;
   display: block;
-  margin: 15px auto;
+  margin: 15px auto 30px auto;
   width: 250px;
   text-align: center;
   text-transform: uppercase;
@@ -285,10 +284,10 @@ input {
   font-size: 20px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   transition: all, 0.2s; }
-  .modal-button:hover {
+  .submit-button:hover {
     box-shadow: 0px 5px 4px 2px rgba(0, 0, 0, 0.1); }
-  .modal-button:active {
-    background-color: #e7d710; }
+  .submit-button:active {
+    background-color: #e2d310; }
 
 input::-webkit-input-placeholder {
   color: #848E87 !important;

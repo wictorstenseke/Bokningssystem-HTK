@@ -1,16 +1,14 @@
 $(function() {
 
   // Klicka på "Boka speltid" öppnar modalen
-  // $('.button').click(function(){
-    $('.modal').addClass('modal-show');
-    $('.modal').css('pointer-events', 'auto');
+  $('.cta-button').click(function(){
+    $('.reservation-modal').slideToggle();
     return false;
   });
 
   // Stänger ner modalen
-  // $('.close-btn').click(function(){
-    $('.modal').removeClass('modal-show');
-    $('.modal').css('pointer-events', 'none');
+  $('.close-btn').click(function(){
+    $('.reservation-modal').slideToggle();
   });
 
 });
