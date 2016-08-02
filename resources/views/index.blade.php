@@ -34,14 +34,9 @@
       <input type="hidden" name="_token" value="{{ csrf_token() }}">
       <input type="text" id="date" name="start_date" placeholder="När vill du spela?" required>
       <br>
-      <?php
-        $startTime = Carbon\Carbon::now();
-        $minutes = date('i', strtotime(Carbon\Carbon::now()->addMinutes(10)));
-        $roundedMinutes = $minutes - ($minutes % 5);
-      ?>
-      <input type="text" id="start" name="start_time" value="{{ $startTime->format('H') .':'. $roundedMinutes }}" placeholder="Vilken tid vill du spela?">
+      <input type="text" id="start" name="start_time" value="{{ defaultStartTime() }}" placeholder="Vilken tid vill du spela?">
       <br>
-      <input type="text" id="stop" name="stop_time" value="{{ $startTime->addHours(2)->format('H') .':'. $roundedMinutes }}" placeholder="Vilken tid tänkte du sluta spela?">
+      <input type="text" id="stop" name="stop_time" value="{{ defaultStopTime() }}" placeholder="Vilken tid tänkte du sluta spela?">
       <br>
       <input type="text" name="name" placeholder="Skriv ditt namn">
       <br>
