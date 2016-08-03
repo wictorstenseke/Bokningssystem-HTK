@@ -137,6 +137,11 @@
   <script src="js/datedropper.js"></script>
   <script src="js/timedropper.js"></script>
   <script>
+    @if($errors->any())
+      $(function (){
+        $('.reservation-modal').toggle();
+      });
+    @endif
     $( "#date" ).dateDropper({
       lang: 'sv',
       format: 'Y-m-d',
