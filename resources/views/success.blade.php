@@ -21,7 +21,7 @@
   <p class="intro-text">Välkommen till Högelids Tennisklubb! Här kan du som är medlem boka speltid på vår grusbana och se andra medlemmars bokade tider.</p>
 
   <div class="bokade-tider">
-    <h4>Bra jobbat!</h4>
+    <h4>Bokning mottagen!</h4>
     <h1><i class="fa fa-thumbs-up"></i></h1>
     <div class="info-reservation">
       <p>Bokad av: <span class="bold-text">{{ $createdReservation->name }}</span></p>
@@ -29,7 +29,7 @@
       <p>Bokad från: <span class="bold-text">{{ $createdReservation->start->formatLocalized('%e %b %H:%M') }}</span></p>
       <p>Bokad till: <span class="bold-text">{{ $createdReservation->stop->formatLocalized('%e %b %H:%M') }}</span></p>
       <div class="hr2"></div>
-      <p>Bokades: {{ $createdReservation->created_at->diffForHumans() }}</p>
+      <p class="italic">Bokades: {{ $createdReservation->created_at->diffForHumans() }}</p>
     </div>
     <a href="#" class="cta-button">Klar</a>
   </div>

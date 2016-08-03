@@ -231,7 +231,7 @@ a {
       margin-right: 10px; }
   .bokade-tider .info-reservation {
     color: #ffffff;
-    line-height: 1.7; }
+    line-height: 1.6; }
     .bokade-tider .info-reservation p {
       text-align: center;
       color: #e6e6e6; }
@@ -239,6 +239,9 @@ a {
         color: #ffffff;
         font-size: 1.2em;
         font-weight: 700; }
+    .bokade-tider .info-reservation .italic {
+      font-style: italic;
+      color: #b3b3b3; }
 
 .hr {
   background-color: #ffffff;
