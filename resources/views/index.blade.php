@@ -120,7 +120,6 @@
             -
             {{ $reservation->stop->format('H:i') }}
             <strong>{{ $reservation->name }}</strong>
-            <a href="{{ route('reservation.softDelete', ['id' => $reservation->id]) }}"></a>
           </p>
         </div>
         <div class="hr2"></div>
