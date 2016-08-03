@@ -8,6 +8,7 @@
   <title>Boka banan | Högelids Tennisklubb</title>
 
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/timedropper.css" type="text/css">
   <link rel="stylesheet" href="css/datedropper.css" type="text/css">
 
@@ -119,7 +120,7 @@
             -
             {{ $reservation->stop->format('H:i') }}
             <strong>{{ $reservation->name }}</strong>
-            <a href="{{ route('reservation.softDelete', ['id' => $reservation->id]) }}"></i></a>
+            <a href="{{ route('reservation.softDelete', ['id' => $reservation->id]) }}"></a>
           </p>
         </div>
         <div class="hr2"></div>
