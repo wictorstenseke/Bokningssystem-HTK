@@ -31,7 +31,7 @@
       <div class="hr2"></div>
       <p class="italic">Bokades: {{ $createdReservation->created_at->diffForHumans() }}</p>
     </div>
-    <a href="#" class="cta-button">Klar</a>
+    <a href="{{ action('ReservationController@index') }}" class="cta-button">Klar</a>
   </div>
 </body>
 </html>
