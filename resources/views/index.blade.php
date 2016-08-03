@@ -51,6 +51,7 @@
         name="start_date"
         class="{{ $errors->has('start_date') ? 'error' : '' }}"
         placeholder="När vill du spela?"
+        value="{{ old('start_date') }}"
       >
       <br>
       <input
@@ -58,7 +59,7 @@
         id="start"
         name="start_time"
         class="{{ $errors->has('start_time') ? 'error' : '' }}"
-        value="{{ defaultStartTime() }}"
+        value="{{ (old('start_time')) ? old('start_time') : defaultStartTime() }}"
         placeholder="Vilken tid vill du spela?"
       >
       <br>
@@ -67,7 +68,7 @@
         id="stop"
         name="stop_time"
         class="{{ $errors->has('stop_time') ? 'error' : '' }}"
-        value="{{ defaultStopTime() }}"
+        value="{{ (old('stop_time')) ? old('stop_time') : defaultStopTime() }}"
         placeholder="Vilken tid tänkte du sluta spela?"
       >
       <br>
@@ -76,6 +77,7 @@
         name="name"
         class="{{ $errors->has('name') ? 'error' : '' }}"
         placeholder="Skriv ditt namn"
+        value="{{ old('name') }}"
       >
       <br>
       <input type="submit" value="Bekräfta bokning" class="submit-button">
