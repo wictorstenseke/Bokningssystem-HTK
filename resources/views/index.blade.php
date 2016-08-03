@@ -7,10 +7,10 @@
   <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700' rel='stylesheet' type='text/css'>
   <title>Boka banan | Högelids Tennisklubb</title>
 
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/animate.css">
-  <link rel="stylesheet" href="css/timedropper.css" type="text/css">
-  <link rel="stylesheet" href="css/datedropper.css" type="text/css">
+  <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/timedropper.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/datedropper.css') }}">
 
   <script src="https://use.fontawesome.com/5cafce8111.js"></script>
 </head>
@@ -21,7 +21,7 @@
 </style>
 <body>
   <div class="bildbox">
-    <img src="img/htk-logo.svg" alt="" class="logotype">
+    <img src="{{ asset('img/htk-logo.svg') }}" alt="" class="logotype">
   </div>
 
   <p class="intro-text">Välkommen till Högelids Tennisklubb! Här kan du som är medlem boka speltid på vår grusbana och se andra medlemmars bokade tider.</p>
@@ -132,10 +132,10 @@
     </div>
   @endif
 
-  <script src="js/jquery-2.2.4.min.js"></script>
-  <script src="js/functions.js"></script>
-  <script src="js/datedropper.js"></script>
-  <script src="js/timedropper.js"></script>
+  <script src="{{ asset('js/jquery-2.2.4.min.js') }}"></script>
+  <script src="{{ asset('js/functions.js') }}"></script>
+  <script src="{{ asset('js/datedropper.js') }}"></script>
+  <script src="{{ asset('js/timedropper.js') }}"></script>
   <script>
     $( "#date" ).dateDropper({
       lang: 'sv',
