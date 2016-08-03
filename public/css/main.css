@@ -219,6 +219,9 @@ a {
     text-transform: uppercase;
     text-align: center;
     color: #ffffff; }
+  .bokade-tider h1 {
+    color: #ffffff;
+    text-align: center; }
   .bokade-tider p {
     color: #ffffff;
     font-size: 18px; }
@@ -226,6 +229,16 @@ a {
       float: right;
       font-size: 20px;
       margin-right: 10px; }
+  .bokade-tider .info-reservation {
+    color: #ffffff;
+    line-height: 1.7; }
+    .bokade-tider .info-reservation p {
+      text-align: center;
+      color: #e6e6e6; }
+      .bokade-tider .info-reservation p .bold-text {
+        color: #ffffff;
+        font-size: 1.2em;
+        font-weight: 700; }
 
 .hr {
   background-color: #ffffff;
