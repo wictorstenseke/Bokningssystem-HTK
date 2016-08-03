@@ -8,14 +8,14 @@
   <title>Boka banan | Högelids Tennisklubb</title>
 
   <link rel="stylesheet" href="{{ asset('css/main.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/timedropper.css') }}" type="text/css">
-  <link rel="stylesheet" href="{{ asset('css/datedropper.css') }}" type="text/css">
 
   <script src="https://use.fontawesome.com/5cafce8111.js"></script>
 </head>
 <body>
   <div class="bildbox">
-    <img src="{{ asset('img/htk-logo.svg') }}" alt="" class="logotype">
+    <a href="{{ action('ReservationController@index') }}">
+      <img src="{{ asset('img/htk-logo.svg') }}" alt="" class="logotype">
+    </a>
   </div>
 
   <p class="intro-text">Välkommen till Högelids Tennisklubb! Här kan du som är medlem boka speltid på vår grusbana och se andra medlemmars bokade tider.</p>

@@ -15,13 +15,20 @@ a
   font-weight: 700
   color: #fff
 
+.bildbox
+  width: 160px
+  margin: 0 auto
+
 .logotype
   background-color: $background-color
   border-radius: 100%
-  box-shadow: 0px 4px 4px  rgba(0, 0, 0, 0.1)
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1)
   display: block
   margin: 10px auto 25px auto
   width: 150px
+  +transition(all, 0.2s)
+  &:hover
+    box-shadow: 0px 4px 6px 2px rgba(0, 0, 0, 0.2)
 
 .intro-text
   text-align: center
@@ -60,8 +67,8 @@ a
     text-align: center
     color: $white
   h1
-    margin: 5px 0 10px 0
-    color: $button-color
+    margin: 15px 0 5px 0
+    color: tint($button-color, 20%)
     text-align: center
   p
     color: $white
@@ -83,7 +90,6 @@ a
     .italic
       font-style: italic
       color: darken($white, 30%)
-
 
 
 .hr
@@ -152,6 +158,13 @@ input
     box-shadow: 0px 5px 4px 2px  rgba(0, 0, 0, 0.1)
   &:active
     background-color: darken($button-color, 10%)
+
+.feedback-error
+  background: tint(#ff0000, 10%)
+  width: 90%
+  margin: 15px auto
+  padding: 5px
+  border-radius: 5px
 
 input::-webkit-input-placeholder
   color: $grey !important

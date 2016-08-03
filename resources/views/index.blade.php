@@ -8,9 +8,6 @@
   <title>Boka banan | Högelids Tennisklubb</title>
 
   <link rel="stylesheet" href="{{ asset('css/main.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/timedropper.css') }}">
-  <link rel="stylesheet" href="{{ asset('css/datedropper.css') }}">
 
   <script src="https://use.fontawesome.com/5cafce8111.js"></script>
 </head>
@@ -21,7 +18,9 @@
 </style>
 <body>
   <div class="bildbox">
-    <img src="{{ asset('img/htk-logo.svg') }}" alt="" class="logotype">
+    <a href="{{ action('ReservationController@index') }}">
+      <img src="{{ asset('img/htk-logo.svg') }}" alt="" class="logotype">
+    </a>
   </div>
 
   <p class="intro-text">Välkommen till Högelids Tennisklubb! Här kan du som är medlem boka speltid på vår grusbana och se andra medlemmars bokade tider.</p>
@@ -37,7 +36,7 @@
     </p>
 
     @if ( $errors->any() )
-    <div style="background: red; width: 100%; margin: 15px 0;">
+    <div class="feedback-error">
       @foreach ($errors->all() as $error)
       {{$error}}<br>
       @endforeach
@@ -110,7 +109,7 @@
   @endif
   @if($oldResesrvations->count())
     <div class="bokade-tider">
-      <h4>Historik: </h4>
+      <h4>Historik</h4>
       <div class="hr"></div>
       @foreach($oldResesrvations as $reservation)
         <div class="bokad-tid">
