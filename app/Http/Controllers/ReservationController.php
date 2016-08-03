@@ -57,7 +57,8 @@ class ReservationController extends Controller
             'stop'  => Carbon::createFromFormat('Y-m-d H:i', $request->start_date . '' . $request->stop_time),
         ]);
 
-        return view('success')->with(['createdReservation' => $createdReservation]);
+        return redirect()->action('ReservationController@success', [$createdReservation]);
+        // return view('success')->with(['createdReservation' => $createdReservation]);
     }
 
     /**
@@ -66,9 +67,9 @@ class ReservationController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function success(Reservation $reservation)
     {
-        return $id;
+        return view('success')->with(['createdReservation' => $reservation]);
     }
 
     /**
