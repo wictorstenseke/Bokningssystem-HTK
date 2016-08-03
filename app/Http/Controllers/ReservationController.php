@@ -20,11 +20,11 @@ class ReservationController extends Controller
         $reservations = Reservation::all();
 
         $futureResesrvations = $reservations->filter(function ($reservation){
-            return $reservation->start > Carbon::now();
+            return $reservation->stop > Carbon::now();
         })->sortBy('start');
 
         $oldResesrvations = $reservations->filter(function ($reservation){
-            return $reservation->start < Carbon::now();
+            return $reservation->stop < Carbon::now();
         })->sortByDesc('start');
 
         return view('index')->with([
