@@ -31,8 +31,8 @@
   <div class="reservation-modal">
     <i class="close-btn fa fa-times"></i>
     <p>Fyll i uppgifterna nedan för att boka speltid.
-      En bokning avser två timmar speltid.
-      Avboka speltiden vid förhinder. Detta görs på startsidan genom att trycka på soptunnan.
+      Avboka speltiden vid förhinder.
+      Detta görs genom att trycka på soptunnan under bokade tider.
     </p>
 
     @if ( $errors->any() )
