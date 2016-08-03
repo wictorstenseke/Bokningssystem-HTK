@@ -12,9 +12,7 @@
   <script src="https://use.fontawesome.com/5cafce8111.js"></script>
 </head>
 <style>
-  .error{
-    border-color: red;
-  }
+
 </style>
 <body>
   <div class="bildbox">
@@ -95,7 +93,12 @@
             -
             {{ $reservation->stop->format('H:i') }}
             <strong>{{ $reservation->name }}</strong>
-            <a href="{{ route('reservation.softDelete', ['id' => $reservation->id]) }}"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+            <i class="fa fa-trash-o tiptool" aria-hidden="true"></i>
+            <div class="test-tip">
+              <p>är du säker på att du vill radera denna bokningen?</p>
+              <p class="tip-button close-tip">NÄPP</p>
+              <a href="{{ route('reservation.softDelete', ['id' => $reservation->id]) }}" class="tip-button">JAPP</a>
+            </div>
           </p>
         </div>
         <div class="hr2"></div>

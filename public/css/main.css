@@ -2039,6 +2039,26 @@ a {
       font-style: italic;
       color: #b3b3b3; }
 
+.bokad-tid {
+  position: relative; }
+
+.test-tip {
+  display: none;
+  text-align: center;
+  position: absolute;
+  right: 0px;
+  top: -15px;
+  color: #194B29;
+  background-color: #F1E334;
+  width: 50%;
+  padding: 1px;
+  margin: 2px 0;
+  border-radius: 5px; }
+  .test-tip p {
+    font-size: 0.8em; }
+  .test-tip .tip-button {
+    background-color: #000; }
+
 .hr {
   background-color: #ffffff;
   height: 2px;
@@ -2082,6 +2102,9 @@ input {
   border-radius: 5px;
   padding: 10px;
   max-width: 80%; }
+
+.error {
+  border: 2px solid #ff1a1a; }
 
 .submit-button {
   padding: 20px 50px;

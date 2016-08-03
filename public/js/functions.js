@@ -11,4 +11,12 @@ $(function() {
     $('.reservation-modal').slideToggle();
   });
 
+  $('.tiptool').click(function(){
+    $('.test-tip').slideToggle();
+  });
+
+  $('.close-tip').click(function(){
+    $('.test-tip').slideToggle();
+  });
+
 });
