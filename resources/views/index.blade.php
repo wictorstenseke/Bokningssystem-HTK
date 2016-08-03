@@ -29,7 +29,7 @@
   <a href="#" class="cta-button">Boka speltid</a>
 
   <!-- Modal -->
-  <div class="reservation-modal">
+  <div class="reservation-modal" {!! ($errors->any()) ? 'style="display: block;"' : '' !!}>
     <i class="close-btn fa fa-times"></i>
     <p>Fyll i uppgifterna nedan för att boka speltid.
       Avboka speltiden vid förhinder.
@@ -138,11 +138,6 @@
   <script src="js/datedropper.js"></script>
   <script src="js/timedropper.js"></script>
   <script>
-    @if($errors->any())
-      $(function (){
-        $('.reservation-modal').toggle();
-      });
-    @endif
     $( "#date" ).dateDropper({
       lang: 'sv',
       format: 'Y-m-d',
