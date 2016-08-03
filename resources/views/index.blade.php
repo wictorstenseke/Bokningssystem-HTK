@@ -95,9 +95,9 @@
             <strong>{{ $reservation->name }}</strong>
             <i class="fa fa-trash-o tiptool" aria-hidden="true"></i>
             <div class="test-tip">
-              <p>är du säker på att du vill radera denna bokningen?</p>
-              <p class="tip-button close-tip">NÄPP</p>
-              <a href="{{ route('reservation.softDelete', ['id' => $reservation->id]) }}" class="tip-button">JAPP</a>
+              <p>Vill du radera bokning?</p>
+              <p class="tip-button close-tip">Nej</p>
+              <a href="{{ route('reservation.softDelete', ['id' => $reservation->id]) }}" class="tip-button">Ja</a>
             </div>
           </p>
         </div>
