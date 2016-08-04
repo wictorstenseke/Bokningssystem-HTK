@@ -930,20 +930,23 @@ td, th {
  *
  * Copyright (c) 2016 Daniel Eden
  */
-.animated {
+.animated, .feedback-error {
   animation-duration: 1s;
   animation-fill-mode: both; }
 
-.animated.infinite {
+.animated.infinite, .infinite.feedback-error {
   animation-iteration-count: infinite; }
 
-.animated.hinge {
+.animated.hinge, .hinge.feedback-error {
   animation-duration: 2s; }
 
-.animated.flipOutX,
+.animated.flipOutX, .flipOutX.feedback-error,
 .animated.flipOutY,
+.flipOutY.feedback-error,
 .animated.bounceIn,
-.animated.bounceOut {
+.bounceIn.feedback-error,
+.animated.bounceOut,
+.bounceOut.feedback-error {
   animation-duration: .75s; }
 
 @keyframes bounce {
@@ -1061,7 +1064,7 @@ td, th {
   to {
     transform: scale3d(1, 1, 1); } }
 
-.tada {
+.tada, .feedback-error {
   animation-name: tada; }
 
 /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
@@ -1469,7 +1472,7 @@ td, th {
     transform: perspective(400px);
     animation-timing-function: ease-in; } }
 
-.animated.flip {
+.animated.flip, .flip.feedback-error {
   backface-visibility: visible;
   animation-name: flip; }
 
@@ -2149,7 +2152,7 @@ input {
 
 .feedback-error {
   background: #ff1a1a;
-  width: 90%;
+  width: 80%;
   margin: 15px auto;
   padding: 5px;
   border-radius: 5px; }

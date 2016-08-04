@@ -207,10 +207,12 @@ input
 
 .feedback-error
   background: tint(#ff0000, 10%)
-  width: 90%
+  width: 80%
   margin: 15px auto
   padding: 5px
   border-radius: 5px
+  @extend .animated
+  @extend .tada
 
 input::-webkit-input-placeholder
   color: $grey !important
