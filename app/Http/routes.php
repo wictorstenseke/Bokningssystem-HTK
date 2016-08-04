@@ -14,8 +14,9 @@
 Route::get('/', 'ReservationController@index');
 
 
-Route::resource('/reservation', 'ReservationController', ['except' => 'index']);
+Route::resource('/reservation', 'ReservationController', ['except' => ['index', 'show']]);
 
 Route::get('/bokningsbekraftelse/{reservation}', 'ReservationController@success')->name('reservation.success');
 
-Route::get('/reservation/{reservation}', 'ReservationController@softDelete')->name('reservation.softDelete');
+Route::get('/reservation/softDelete/{reservation}', 'ReservationController@softDelete')->name('reservation.softDelete');
+Route::get('/reservation/restore/{id}', 'ReservationController@restore')->name('reservation.restore');

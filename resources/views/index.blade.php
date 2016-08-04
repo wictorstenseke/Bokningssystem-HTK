@@ -8,6 +8,7 @@
   <title>Boka banan | Högelids Tennisklubb</title>
 
   <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.3/toastr.css">
 
   <script src="https://use.fontawesome.com/5cafce8111.js"></script>
 </head>
@@ -135,10 +136,71 @@
   @endif
 
   <script src="{{ asset('js/jquery-2.2.4.min.js') }}"></script>
+  <script src=//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.js></script>
   <script src="{{ asset('js/functions.js') }}"></script>
   <script src="{{ asset('js/datedropper.js') }}"></script>
   <script src="{{ asset('js/timedropper.js') }}"></script>
+
   <script>
+    @if(Session::has('deletedReservation'))
+    $(function(){
+      toastr.options = {
+        "closeButton": false,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": true,
+        "positionClass": "toast-top-full-width",
+        "preventDuplicates": false,
+        "onclick": null,
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "10000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+      }
+      console.log('deleted!!');
+      toastr.warning(
+        '{{ $reservation->start->formatLocalized('%e %b %H:%M') }}'
+        +'-'+
+        '{{ $reservation->stop->format('H:i') }}'
+        + ' <strong>Bokad av</strong>: {{ $reservation->name }}'
+        +"<br><a href='{{ route('reservation.restore', Session::get('deletedReservation')->id) }}'>Klicka här för att ångra</a>", "Bokning raderad")
+
+    })
+    @endif
+    @if(Session::has('restoredReservation') && $restoredReservation = Session::get('restoredReservation'))
+      $(function(){
+        toastr.options = {
+          "closeButton": false,
+          "debug": false,
+          "newestOnTop": false,
+          "progressBar": true,
+          "positionClass": "toast-top-full-width",
+          "preventDuplicates": false,
+          "onclick": null,
+          "showDuration": "300",
+          "hideDuration": "1000",
+          "timeOut": "10000",
+          "extendedTimeOut": "1000",
+          "showEasing": "swing",
+          "hideEasing": "linear",
+          "showMethod": "fadeIn",
+          "hideMethod": "fadeOut"
+        }
+
+
+        toastr.success("<strong>Bokning:</strong>" +
+          '{{ $reservation->start->formatLocalized('%e %b %H:%M') }}'
+          +'-'+
+          '{{ $reservation->stop->format('H:i') }}'
+          + ' <strong>Bokad av</strong>: {{ $reservation->name }}'
+          , "Återställde bokning")
+
+      })
+    @endif
     @if($errors->any())
       $('html, body').animate({
         scrollTop: $(".feedback-error").offset().top - 20

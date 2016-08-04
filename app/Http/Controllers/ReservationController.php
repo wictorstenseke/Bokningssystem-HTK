@@ -6,6 +6,7 @@ use Carbon\Carbon;
 use App\Reservation;
 use App\Http\Requests;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 use App\Http\Requests\ReservationRequest;
 
 class ReservationController extends Controller
@@ -104,6 +105,21 @@ class ReservationController extends Controller
     public function softDelete(Reservation $reservation)
     {
         $reservation->delete();
+        Session::flash('deletedReservation', $reservation);
+
+        return redirect()->back();
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function restore($id)
+    {
+        $reservation = Reservation::withTrashed()->findOrFail($id)->restore();
+        Session::flash('restoredReservation', $reservation);
         return redirect()->back();
     }
 
