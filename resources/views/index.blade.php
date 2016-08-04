@@ -139,6 +139,12 @@
   <script src="{{ asset('js/datedropper.js') }}"></script>
   <script src="{{ asset('js/timedropper.js') }}"></script>
   <script>
+    @if($errors->any())
+      $('html, body').animate({
+        scrollTop: $(".feedback-error").offset().top - 20
+      }, 400);
+    @endif
+
     $( "#date" ).dateDropper({
       lang: 'sv',
       format: 'Y-m-d',
