@@ -23,7 +23,7 @@
 
   <p class="intro-text">Välkommen till Högelids Tennisklubb! Här kan du som är medlem boka speltid på vår grusbana och se andra medlemmars bokade tider.</p>
 
-  <a href="#" class="cta-button">Boka speltid</a>
+  <div class="cta-button">Boka speltid</div>
 
   <!-- Modal -->
   <div class="reservation-modal" {!! ($errors->any()) ? 'style="display: block;"' : '' !!}>
@@ -93,8 +93,8 @@
             -
             {{ $reservation->stop->format('H:i') }}
             <strong>{{ $reservation->name }}</strong>
-            <i class="fa fa-trash-o tiptool" aria-hidden="true"></i>
-            <div class="test-tip">
+            <i class="fa fa-trash-o tiptool" data-id="{{ $reservation->id }}" aria-hidden="true"></i>
+            <div class="test-tip" data-tooltip-id="{{ $reservation->id }}">
               <p>Vill du radera bokning?</p>
               <p class="tip-button close-tip">Nej</p>
               <a href="{{ route('reservation.softDelete', ['id' => $reservation->id]) }}" class="tip-button">Ja</a>
