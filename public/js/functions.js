@@ -12,7 +12,7 @@ $(function() {
 
   // Öppnar tooltip
   $('.tiptool').click(function(){
-    $('.test-tip').slideToggle();
+    $(this).find('.test-tip').slideToggle();
   });
   // Stänger tooltip
   $('.close-tip').click(function(){
