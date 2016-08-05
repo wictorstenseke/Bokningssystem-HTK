@@ -141,7 +141,7 @@
   <script src="{{ asset('js/timedropper.js') }}"></script>
 
   <script>
-    @if(Session::has('deletedReservation'))
+    @if(Session::has('deletedReservation') && $deletedReservation = Session::get('deletedReservation'))
     $(function(){
       toastr.options = {
         "closeButton": false,
@@ -162,10 +162,10 @@
       }
       console.log('deleted!!');
       toastr.warning(
-        '{{ $reservation->start->formatLocalized('%e %b %H:%M') }}'
+        '{{ $deletedReservation->start->formatLocalized('%e %b %H:%M') }}'
         +'-'+
-        '{{ $reservation->stop->format('H:i') }}'
-        + ' <strong>Bokad av</strong>: {{ $reservation->name }}'
+        '{{ $deletedReservation->stop->format('H:i') }}'
+        + ' <strong>Bokad av</strong>: {{ $deletedReservation->name }}'
         +"<br><a href='{{ route('reservation.restore', Session::get('deletedReservation')->id) }}'>Klicka här för att ångra</a>", "Bokning raderad")
 
     })
