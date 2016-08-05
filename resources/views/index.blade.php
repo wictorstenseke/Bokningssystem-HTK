@@ -96,7 +96,7 @@
             <div class="test-tip" data-tooltip-id="{{ $reservation->id }}">
               <p>Vill du radera bokning?</p>
               <p class="tip-button close-tip">Nej</p>
-              <a href="{{ route('reservation.softDelete', ['id' => $reservation->id]) }}" class="tip-button">Ja</a>
+              <p data-reservation-id="{{ $reservation->id }}" class="tip-button">Ja</p>
             </div>
           </p>
         </div>
@@ -150,35 +150,6 @@
   <script src="{{ asset('js/timedropper.js') }}"></script>
 
   <script>
-    @if(Session::has('deletedReservation') && $deletedReservation = Session::get('deletedReservation'))
-    $(function(){
-      toastr.options = {
-        "closeButton": false,
-        "debug": false,
-        "newestOnTop": false,
-        "progressBar": true,
-        "positionClass": "toast-top-full-width",
-        "preventDuplicates": false,
-        "onclick": null,
-        "showDuration": "300",
-        "hideDuration": "1000",
-        "timeOut": "10000",
-        "extendedTimeOut": "1000",
-        "showEasing": "swing",
-        "hideEasing": "linear",
-        "showMethod": "fadeIn",
-        "hideMethod": "fadeOut"
-      }
-      console.log('deleted!!');
-      toastr.warning(
-        '{{ $deletedReservation->start->formatLocalized('%e %b %H:%M') }}'
-        +'-'+
-        '{{ $deletedReservation->stop->format('H:i') }}'
-        + ' <strong>Bokad av</strong>: {{ $deletedReservation->name }}'
-        +"<br><a href='{{ route('reservation.restore', Session::get('deletedReservation')->id) }}'>Klicka här för att ångra</a>", "Bokning raderad")
-
-    })
-    @endif
     @if(Session::has('restoredReservation') && $restoredReservation = Session::get('restoredReservation'))
       $(function(){
         toastr.options = {
@@ -201,10 +172,10 @@
 
 
         toastr.success("<strong>Bokning:</strong>" +
-          '{{ $reservation->start->formatLocalized('%e %b %H:%M') }}'
+          '{{ $restoredReservation->start->formatLocalized('%e %b %H:%M') }}'
           +'-'+
-          '{{ $reservation->stop->format('H:i') }}'
-          + ' <strong>Bokad av</strong>: {{ $reservation->name }}'
+          '{{ $restoredReservation->stop->format('H:i') }}'
+          + ' <strong>Bokad av</strong>: {{ $restoredReservation->name }}'
           , "Återställde bokning")
 
       })

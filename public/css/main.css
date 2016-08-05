@@ -4429,6 +4429,7 @@ a {
       color: #b3b3b3; }
 
 .bokad-tid {
+  animation-duration: .6s !important;
   position: relative; }
 
 .tiptool {
