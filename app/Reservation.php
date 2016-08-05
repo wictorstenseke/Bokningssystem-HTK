@@ -13,4 +13,16 @@ class Reservation extends Model
 
     protected $dates = ['start', 'stop'];
 
+    protected $appends = [
+        'startFullDate',
+        'stopTime',
+    ];
+
+    public function getStartFullDateAttribute(){
+        return $this->start->formatLocalized('%e %b %H:%M');
+    }
+
+    public function getStopTimeAttribute(){
+        return $this->stop->format('H:i');
+    }
 }

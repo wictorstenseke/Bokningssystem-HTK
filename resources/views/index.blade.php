@@ -141,35 +141,6 @@
   <script src="{{ asset('js/timedropper.js') }}"></script>
 
   <script>
-    @if(Session::has('deletedReservation') && $deletedReservation = Session::get('deletedReservation'))
-    $(function(){
-      toastr.options = {
-        "closeButton": false,
-        "debug": false,
-        "newestOnTop": false,
-        "progressBar": true,
-        "positionClass": "toast-top-full-width",
-        "preventDuplicates": false,
-        "onclick": null,
-        "showDuration": "300",
-        "hideDuration": "1000",
-        "timeOut": "10000",
-        "extendedTimeOut": "1000",
-        "showEasing": "swing",
-        "hideEasing": "linear",
-        "showMethod": "fadeIn",
-        "hideMethod": "fadeOut"
-      }
-      console.log('deleted!!');
-      toastr.warning(
-        '{{ $deletedReservation->start->formatLocalized('%e %b %H:%M') }}'
-        +'-'+
-        '{{ $deletedReservation->stop->format('H:i') }}'
-        + ' <strong>Bokad av</strong>: {{ $deletedReservation->name }}'
-        +"<br><a href='{{ route('reservation.restore', Session::get('deletedReservation')->id) }}'>Klicka här för att ångra</a>", "Bokning raderad")
-
-    })
-    @endif
     @if(Session::has('restoredReservation') && $restoredReservation = Session::get('restoredReservation'))
       $(function(){
         toastr.options = {

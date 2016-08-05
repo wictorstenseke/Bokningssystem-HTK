@@ -55,10 +55,10 @@ $(function() {
         clickThis.parent().hide();
         clickThis.parent().parent('.bokad-tid').animateCss('zoomOutRight');
         toastr.warning(
-             deletedReservation.name
+             deletedReservation.startFullDate
              +'-'+
-             deletedReservation.name
-             + "<strong>Bokad av</strong>:" + deletedReservation.name
+             deletedReservation.stopTime
+             + " <strong>Bokad av</strong>:" + deletedReservation.name
              +"<br><a href='reservation/restore/"+ deletedReservation.id + "'>Klicka här för att ångra</a>", "Bokning raderad");
          }
      });
