@@ -20,7 +20,7 @@
 
   <div class="bokade-tider">
     <h4>Bokning mottagen!</h4>
-    <h1><i class="fa fa-thumbs-up"></i></h1>
+    <h1><i class="fa fa-thumbs-up animated tada"></i></h1>
     <div class="info-reservation">
       <p>Bokad av: <span class="bold-text">{{ $createdReservation->name }}</span></p>
       <div class="hr2"></div>
