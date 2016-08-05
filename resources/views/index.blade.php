@@ -56,8 +56,8 @@
         id="start"
         name="start_time"
         class="{{ $errors->has('start_time') ? 'error' : '' }}"
-        value="{{ (old('start_time')) ? old('start_time') : defaultStartTime() }}"
         placeholder="Vilken tid vill du spela?"
+        value="{{ (old('start_time')) ? old('start_time') : '' }}"
       >
       <br>
       <input
@@ -65,8 +65,8 @@
         id="stop"
         name="stop_time"
         class="{{ $errors->has('stop_time') ? 'error' : '' }}"
-        value="{{ (old('stop_time')) ? old('stop_time') : defaultStopTime() }}"
         placeholder="Vilken tid tänkte du sluta spela?"
+        value="{{ (old('stop_time')) ? old('stop_time') : '' }}"
       >
       <br>
       <input
@@ -146,6 +146,7 @@
   <script src="{{ asset('js/jquery-2.2.4.min.js') }}"></script>
   <script src=//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.js></script>
   <script src="{{ asset('js/functions.js') }}"></script>
+  <script src="{{ asset('js/moment-with-locales.min.js') }}"></script>
   <script src="{{ asset('js/datedropper.js') }}"></script>
   <script src="{{ asset('js/timedropper.js') }}"></script>
 
@@ -191,8 +192,37 @@
       format: 'Y-m-d',
       lock: 'from',
     });
-    $( "#start" ).timeDropper({lang: 'sv', format: 'H:m', minutesInterval: 5});
-    $( "#stop" ).timeDropper({lang: 'sv', format: 'H:m', minutesInterval: 5});
+
+    var startTimeDropperIsActive = false;
+    var stopTimeDropperIsActive = false;
+
+    var startTimeObj = $('[name="start_time"]');
+    var stopTimeObj = $('[name="stop_time"]');
+
+    startTimeObj.on('focus, click', function () {
+      if(!startTimeDropperIsActive){
+        startTimeObj.val('{{ (old('start_time')) ? old('start_time') : defaultStartTime() }}');
+        startTimeObj.timeDropper({lang: 'sv', format: 'H:m', minutesInterval: 5});
+        startTimeDropperIsActive = true;
+        startTimeObj.trigger('click');
+      }
+    })
+
+    stopTimeObj.on('focus, click', function () {
+      if(!stopTimeDropperIsActive){
+        if(startTimeDropperIsActive){
+          var newTime = moment(startTimeObj.val(), 'HH:mm').add(2, 'hours');
+          stopTimeObj.val(newTime.format('HH:mm'))
+        }
+        else{
+          stopTimeObj.val('{{ (old('stop_time')) ? old('stop_time') : defaultStopTime() }}');
+        }
+        stopTimeObj.timeDropper({lang: 'sv', format: 'H:m', minutesInterval: 5});
+        stopTimeDropperIsActive = true;
+        stopTimeObj.trigger('click');
+      }
+    })
+
   </script>
 </body>
 </html>
