@@ -97,7 +97,7 @@
             <div class="test-tip" data-tooltip-id="{{ $reservation->id }}">
               <p>Vill du radera bokning?</p>
               <p class="tip-button close-tip">Nej</p>
-              <a href="{{ route('reservation.softDelete', ['id' => $reservation->id]) }}" class="tip-button">Ja</a>
+              <p data-reservation-id="{{ $reservation->id }}" class="tip-button">Ja</p>
             </div>
           </p>
         </div>
@@ -192,10 +192,10 @@
 
 
         toastr.success("<strong>Bokning:</strong>" +
-          '{{ $reservation->start->formatLocalized('%e %b %H:%M') }}'
+          '{{ $restoredReservation->start->formatLocalized('%e %b %H:%M') }}'
           +'-'+
-          '{{ $reservation->stop->format('H:i') }}'
-          + ' <strong>Bokad av</strong>: {{ $reservation->name }}'
+          '{{ $restoredReservation->stop->format('H:i') }}'
+          + ' <strong>Bokad av</strong>: {{ $restoredReservation->name }}'
           , "Återställde bokning")
 
       })

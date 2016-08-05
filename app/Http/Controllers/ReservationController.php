@@ -105,9 +105,7 @@ class ReservationController extends Controller
     public function softDelete(Reservation $reservation)
     {
         $reservation->delete();
-        Session::flash('deletedReservation', $reservation);
-
-        return redirect()->back();
+        return $reservation;
     }
 
     /**
@@ -118,7 +116,8 @@ class ReservationController extends Controller
      */
     public function restore($id)
     {
-        $reservation = Reservation::withTrashed()->findOrFail($id)->restore();
+        $reservation = Reservation::withTrashed()->findOrFail($id);
+        $reservation->restore();
         Session::flash('restoredReservation', $reservation);
         return redirect()->back();
     }
