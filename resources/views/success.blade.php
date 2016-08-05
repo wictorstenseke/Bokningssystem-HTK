@@ -26,8 +26,8 @@
       <div class="hr2"></div>
       <p>Bokad från: <span class="bold-text">{{ $createdReservation->start->formatLocalized('%e %b %H:%M') }}</span></p>
       <p>Bokad till: <span class="bold-text">{{ $createdReservation->stop->formatLocalized('%e %b %H:%M') }}</span></p>
-      <div class="hr2"></div>
-      <p class="italic">Bokades: {{ $createdReservation->created_at->diffForHumans() }}</p>
+      {{-- <div class="hr2"></div> --}}
+      {{-- <p class="italic">Bokades: {{ $createdReservation->created_at->diffForHumans() }}</p> --}}
     </div>
     <a href="{{ action('ReservationController@index') }}" class="cta-button">Klar</a>
   </div>
