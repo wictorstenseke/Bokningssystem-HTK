@@ -18,8 +18,6 @@
     </a>
   </div>
 
-  <p class="intro-text">Välkommen till Högelids Tennisklubb! Här kan du som är medlem boka speltid på vår grusbana och se andra medlemmars bokade tider.</p>
-
   <div class="bokade-tider">
     <h4>Bokning mottagen!</h4>
     <h1><i class="fa fa-thumbs-up"></i></h1>
