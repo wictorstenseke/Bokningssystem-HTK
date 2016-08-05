@@ -8,8 +8,7 @@
   <title>Boka banan | Högelids Tennisklubb</title>
 
   <link rel="stylesheet" href="{{ asset('css/main.css') }}">
-
-  <script src="https://use.fontawesome.com/5cafce8111.js"></script>
+  
 </head>
 <style>
 
