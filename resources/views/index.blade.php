@@ -8,7 +8,7 @@
   <title>Boka banan | Högelids Tennisklubb</title>
 
   <link rel="stylesheet" href="{{ asset('css/main.css') }}">
-  
+
 </head>
 <style>
 
@@ -16,7 +16,7 @@
 <body>
   <div class="bildbox">
     <a href="{{ action('ReservationController@index') }}">
-      <img src="{{ asset('img/htk-logo.svg') }}" alt="" class="logotype">
+      <img src="{{ asset('img/htk-logo.svg') }}" class="logotype">
     </a>
   </div>
 
@@ -106,7 +106,12 @@
   @else
     <div class="bokade-tider">
       <h4>Bokade tider 2016</h4>
-      <h5>Det finns inga bokade tider</h5>
+      <div class="hr"></div>
+      <div class="empty-state">
+        {{-- Icon made by Papedesign from www.flaticon.com  --}}
+        <img src="{{ asset('img/tennis-ball.svg') }}">
+        <p>Det är ingen som har bokat tid för tillfället!</p>
+      </div>
     </div>
   @endif
   @if($oldResesrvations->count())
@@ -129,7 +134,12 @@
   @else
     <div class="bokade-tider">
       <h4>Historik</h4>
-      <h5>Det finns inga bokade tider i historiken</h5>
+      <div class="hr"></div>
+      <div class="empty-state">
+        {{-- Icon made by Papedesign from www.flaticon.com  --}}
+        <img src="{{ asset('img/tennis-ball.svg') }}">
+        <p>Det har inte varit någon drabbning på centercourten i år!</p>
+      </div>
     </div>
   @endif
 

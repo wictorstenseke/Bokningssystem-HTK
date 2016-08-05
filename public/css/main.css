@@ -4399,7 +4399,7 @@ a {
   border-radius: 10px; }
   .bokade-tider h4 {
     font-size: 20px;
-    margin: 5px 0 5px 0;
+    margin: 5px 0;
     text-transform: uppercase;
     text-align: center;
     color: #ffffff; }
@@ -4554,6 +4554,16 @@ input:-ms-input-placeholder {
   color: #848E87 !important;
   font-style: italic;
   text-align: center; }
+
+.empty-state {
+  width: 95%;
+  text-align: center; }
+  .empty-state img {
+    display: block;
+    margin: 10px auto;
+    width: 50px; }
+  .empty-state p {
+    margin: 5px 0; }
 
 @media screen and (max-width: 675px) {
   .logotype {
