@@ -260,3 +260,45 @@ input:-ms-input-placeholder
       font-size: 16px
   .intro-text
     max-width: 560px
+
+
+
+
+    // EMPTY STATE
+    @-webkit-keyframes rotating /* Safari and Chrome */
+      from
+        -ms-transform: rotateY(0deg)
+        -moz-transform: rotateY(0deg)
+        -webkit-transform: rotateY(0deg)
+        -o-transform: rotateY(0deg)
+        transform: rotateY(0deg)
+
+      to
+        -ms-transform: rotateY(180deg)
+        -moz-transform: rotateY(180deg)
+        -webkit-transform: rotateY(180deg)
+        -o-transform: rotateY(180deg)
+        transform: rotateY(180deg)
+
+
+    @keyframes rotating
+      from
+        -ms-transform: rotateY(0deg)
+        -moz-transform: rotateY(0deg)
+        -webkit-transform: rotateY(0deg)
+        -o-transform: rotateY(0deg)
+        transform: rotateY(0deg)
+
+      to
+        -ms-transform: rotateY(180deg)
+        -moz-transform: rotateY(180deg)
+        -webkit-transform: rotateY(180deg)
+        -o-transform: rotateY(180deg)
+        transform: rotateY(180deg)
+
+    .rotating
+      -webkit-animation: rotating .2s ease-in-out 2s
+      -moz-animation: rotating .2s ease-in-out 2s
+      -ms-animation: rotating .2s ease-in-out 2s
+      -o-animation: rotating .2s ease-in-out 2s
+      animation: rotating .2s ease-in-out 2s
