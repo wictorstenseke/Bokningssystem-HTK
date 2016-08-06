@@ -4365,7 +4365,7 @@ a {
 .intro-text {
   text-align: center;
   color: #FFF;
-  max-width: 560px;
+  max-width: 680px;
   margin: 0px auto 25px auto;
   font-size: 16px; }
 
@@ -4558,16 +4558,17 @@ input:-ms-input-placeholder {
 
 .empty-state {
   width: 95%;
-  text-align: center; }
+  text-align: center;
+  padding: 25px 10px; }
   .empty-state img {
     display: block;
-    margin: 5px auto;
-    width: 50px; }
+    margin: 0px auto 10px auto;
+    width: 90px; }
   .empty-state p {
-    margin: 5px 0; }
+    margin: 0px 0; }
   .empty-state .bold-text {
     color: #ffffff;
-    font-size: 1.3em;
+    font-size: 1.5em;
     font-weight: 700;
     text-transform: uppercase; }
 
@@ -4576,6 +4577,8 @@ input:-ms-input-placeholder {
     width: 90px;
     margin: 10px auto 19px auto; }
   .bokade-tider p {
-    font-size: 16px; } }
+    font-size: 16px; }
+  .intro-text {
+    max-width: 560px; } }
 
 /*# sourceMappingURL=main.css.map */

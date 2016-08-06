@@ -20,7 +20,8 @@
     </a>
   </div>
 
-  <p class="intro-text">Välkommen till Högelids Tennisklubb! Här kan du som är medlem boka speltid på vår grusbana och se andra medlemmars bokade tider.</p>
+  <h3 style="color:white; font-size: 1.6em; transform:uppercase;text-align: center;margin-bottom: 0.5em;margin-top: 0.5em;">Välkommen till <br> Högelids Tennisklubb!</h3>
+  <p class="intro-text">Här kan du som är medlem boka speltid på vår grusbana och se andra medlemmars bokade tider.</p>
 
   <div class="cta-button">Boka speltid</div>
 
@@ -47,7 +48,7 @@
         id="date"
         name="start_date"
         class="{{ $errors->has('start_date') ? 'error' : '' }}"
-        placeholder="Vilket datum?"
+        placeholder="Välj datum"
         value="{{ old('start_date') }}"
       >
       <br>
@@ -56,7 +57,7 @@
         id="start"
         name="start_time"
         class="{{ $errors->has('start_time') ? 'error' : '' }}"
-        placeholder="Börjar spela?"
+        placeholder="Börja spela kl."
         value="{{ (old('start_time')) ? old('start_time') : '' }}"
       >
       <br>
@@ -65,7 +66,7 @@
         id="stop"
         name="stop_time"
         class="{{ $errors->has('stop_time') ? 'error' : '' }}"
-        placeholder="Slutar spela?"
+        placeholder="Sluta spela kl."
         value="{{ (old('stop_time')) ? old('stop_time') : '' }}"
       >
       <br>
@@ -81,40 +82,35 @@
     </form>
   </div>
 
-  @if($futureResesrvations->count())
     <div class="bokade-tider">
       <h4>Bokade tider 2016</h4>
       <div class="hr"></div>
-      @foreach($futureResesrvations as $reservation)
-        <div class="bokad-tid">
-          <p>
-            {{ $reservation->start->formatLocalized('%e %b %H:%M') }}
-            -
-            {{ $reservation->stop->format('H:i') }}
-            <strong>{{ $reservation->name }}</strong>
-            <i class="fa fa-trash-o tiptool" data-id="{{ $reservation->id }}" aria-hidden="true"></i>
-            <div class="test-tip" data-tooltip-id="{{ $reservation->id }}">
-              <p>Vill du radera bokning?</p>
-              <p class="tip-button close-tip">Nej</p>
-              <p data-reservation-id="{{ $reservation->id }}" class="tip-button">Ja</p>
-            </div>
-          </p>
-        </div>
-        <div class="hr2"></div>
-      @endforeach
-    </div>
-  @else
-    <div class="bokade-tider">
-      <h4>Bokade tider 2016</h4>
-      <div class="hr"></div>
-      <div class="empty-state">
+      @if($futureResesrvations->count())
+        @foreach($futureResesrvations as $reservation)
+          <div class="bokad-tid">
+            <p>
+              {{ $reservation->start->formatLocalized('%e %b %H:%M') }}
+              -
+              {{ $reservation->stop->format('H:i') }}
+              <strong>{{ $reservation->name }}</strong>
+              <i class="fa fa-trash-o tiptool" data-id="{{ $reservation->id }}" aria-hidden="true"></i>
+              <div class="test-tip" data-tooltip-id="{{ $reservation->id }}">
+                <p>Vill du radera bokning?</p>
+                <p class="tip-button close-tip">Nej</p>
+                <p data-reservation-id="{{ $reservation->id }}" class="tip-button">Ja</p>
+              </div>
+            </p>
+            <div class="hr2"></div>
+          </div>
+        @endforeach
+      @endif
+      <div class="empty-state" id="empty-state-future-reservations" {!! $futureResesrvations->count() > 0 ? 'style="display:none;"' : '' !!}>
         {{-- Icon made by Papedesign from www.flaticon.com  --}}
         <img src="{{ asset('img/tennis-ball.svg') }}">
-        <p class="bold-text">Ledigt!</p>
-        <p>Det finns inga bokade tider just nu, banan är din!</p>
+        <p class="bold-text">banan är ledig!</p>
+        <p>Det finns inga bokade tider just nu.</p>
       </div>
     </div>
-  @endif
   @if($oldResesrvations->count())
     <div class="bokade-tider">
       <h4>Historik</h4>
@@ -128,8 +124,8 @@
             {{ $reservation->stop->format('H:i') }}
             <strong>{{ $reservation->name }}</strong>
           </p>
+          <div class="hr2"></div>
         </div>
-        <div class="hr2"></div>
       @endforeach
     </div>
   @else
@@ -184,7 +180,7 @@
     @endif
     @if($errors->any())
       $('html, body').animate({
-        scrollTop: $(".feedback-error").offset().top - 20
+        scrollTop: $(".reservation-modal").offset().top - 10
       }, 400);
     @endif
 

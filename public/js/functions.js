@@ -27,6 +27,9 @@ $(function() {
       specialEasing: 'ease-in',
       duration: 300,
     });
+    $('html, body').animate({
+      scrollTop: $(".reservation-modal").offset().top - 10
+    }, 400);
   });
 
   // Öppnar tooltip
@@ -48,12 +51,21 @@ $(function() {
 
   $('.tip-button').click(function (e) {
     var clickThis = $(this);
+    var futureReservationsDiv = clickThis.parent().parent().parent('.bokade-tider');
     $.ajax({
        url: "/reservation/softDelete/" + $(this).data('reservation-id'),
        success:function(deletedReservation) {
         console.log(deletedReservation);
         clickThis.parent().hide();
         clickThis.parent().parent('.bokad-tid').animateCss('zoomOutRight');
+        setTimeout(function () {
+          clickThis.parent().parent('.bokad-tid').remove();
+          console.log('antal: ' + futureReservationsDiv.children('.bokad-tid').length);
+          if(futureReservationsDiv.children('.bokad-tid').length == 0){
+            $('#empty-state-future-reservations').slideToggle();
+          }
+        }, 800);
+
         toastr.warning(
              deletedReservation.startFullDate
              +'-'+
