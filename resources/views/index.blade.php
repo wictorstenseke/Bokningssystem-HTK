@@ -47,7 +47,7 @@
         id="date"
         name="start_date"
         class="{{ $errors->has('start_date') ? 'error' : '' }}"
-        placeholder="När vill du spela?"
+        placeholder="Vilket datum?"
         value="{{ old('start_date') }}"
       >
       <br>
@@ -56,7 +56,7 @@
         id="start"
         name="start_time"
         class="{{ $errors->has('start_time') ? 'error' : '' }}"
-        placeholder="Vilken tid vill du spela?"
+        placeholder="Börjar spela?"
         value="{{ (old('start_time')) ? old('start_time') : '' }}"
       >
       <br>
@@ -65,7 +65,7 @@
         id="stop"
         name="stop_time"
         class="{{ $errors->has('stop_time') ? 'error' : '' }}"
-        placeholder="Vilken tid tänkte du sluta spela?"
+        placeholder="Slutar spela?"
         value="{{ (old('stop_time')) ? old('stop_time') : '' }}"
       >
       <br>
@@ -110,7 +110,8 @@
       <div class="empty-state">
         {{-- Icon made by Papedesign from www.flaticon.com  --}}
         <img src="{{ asset('img/tennis-ball.svg') }}">
-        <p>Det är ingen som har bokat tid för tillfället!</p>
+        <p class="bold-text">Ledigt!</p>
+        <p>Det finns inga bokade tider just nu, banan är din!</p>
       </div>
     </div>
   @endif
