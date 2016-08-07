@@ -25,7 +25,7 @@ $(function() {
       e.preventDefault();
     $('.reservation-modal').slideToggle({
       specialEasing: 'ease-in',
-      duration: 300,
+      duration: 400,
     });
     $('html, body').animate({
       scrollTop: $(".reservation-modal").offset().top - 10
