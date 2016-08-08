@@ -240,6 +240,8 @@ input:-ms-input-placeholder
     display: block
     margin: 0px auto 10px auto
     width: 90px
+    #ball
+      animation: snurr 2s infinite
   // img
   //   display: block
   //   margin: 0px auto 10px auto
@@ -252,6 +254,12 @@ input:-ms-input-placeholder
     font-size: 1.5em
     font-weight: 700
     text-transform: uppercase
+
+@keyframes snurr
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
 
 
 // MEDIA QUERIES

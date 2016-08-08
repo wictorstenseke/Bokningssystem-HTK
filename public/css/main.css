@@ -4564,6 +4564,8 @@ input:-ms-input-placeholder {
     display: block;
     margin: 0px auto 10px auto;
     width: 90px; }
+    .empty-state .tennis-boll #ball {
+      animation: snurr 2s infinite; }
   .empty-state p {
     margin: 0px 0; }
   .empty-state .bold-text {
@@ -4572,6 +4574,12 @@ input:-ms-input-placeholder {
     font-size: 1.5em;
     font-weight: 700;
     text-transform: uppercase; }
+
+@keyframes snurr {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
 
 @media screen and (max-width: 675px) {
   .logotype {
