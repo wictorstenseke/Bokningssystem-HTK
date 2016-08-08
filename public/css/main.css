@@ -4568,6 +4568,7 @@ input:-ms-input-placeholder {
     margin: 0px 0; }
   .empty-state .bold-text {
     color: #ffffff;
+    margin-bottom: 5px;
     font-size: 1.5em;
     font-weight: 700;
     text-transform: uppercase; }
