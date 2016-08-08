@@ -4560,7 +4560,7 @@ input:-ms-input-placeholder {
   width: 95%;
   text-align: center;
   padding: 25px 10px; }
-  .empty-state img {
+  .empty-state .tennis-boll {
     display: block;
     margin: 0px auto 10px auto;
     width: 90px; }
