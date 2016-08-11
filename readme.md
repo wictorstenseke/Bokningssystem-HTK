@@ -1,5 +1,7 @@
-# Bokningssystem Högelids Tennisklubb
+<img src="http://htk.blomdahldaniel.se/img/htk-logo.svg" width="200">
+# Högelids Tennisklubb - Bokningssystem
 
+### [htk.blomdahldaniel.se](http://htk.blomdahldaniel.se/)
 
 ### Databas
 Default så skapas bokningar som kan vara upp till 3 år gamla.
@@ -18,11 +20,11 @@ $year   = Carbon::now()->subYears(rand(0,3))->year;
 
 
 
-#### Kommandon
+#### Kommandon i terminalen
 ```bash
-#Skapa fake-data
+# Skapa fake-data
 php artisan db:seed
 
-#Töm databasen
+# Töm databasen
 php artisan db:seed --class="Truncate"
 ```
