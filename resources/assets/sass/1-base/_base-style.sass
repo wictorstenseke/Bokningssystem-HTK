@@ -14,6 +14,12 @@ a
   text-decoration: none
   font-weight: 700
   color: #fff
+h5
+  font-size: 16px
+  margin: 5px 0
+  text-transform: uppercase
+  text-align: center
+  color: $white
 
 .bildbox
   width: 160px
@@ -99,6 +105,13 @@ a
 .bokad-tid
   animation-duration: .6s !important
   position: relative
+  p
+    text-align: left
+    color: $white
+    font-size: 18px
+    font-size: $main-font-size
+    font-weight: normal
+    text-transform: none
 
 .tiptool
   cursor: pointer
@@ -232,6 +245,34 @@ input:-ms-input-placeholder
   font-style: italic
   text-align: center
 
+
+.history-button-group
+  width: 100%
+  display: flex
+  justify-content: center
+  flex-wrap: wrap
+  margin-top: 5px
+
+  .button-year
+    background: $background-color
+    border-radius: 25px
+    margin: 5px
+    height: 42px
+    width: 80px
+    padding: 10px 0
+    text-align: center
+    font-size: 18px
+    +transition(all, 0.2s)
+
+  .button-year:hover,
+  .button-year:focus,
+  .button-year:active,
+    box-shadow: 0px 5px 4px 2px  rgba(0, 0, 0, 0.2)
+
+  .active
+    background: lighten($background-color, 15%)
+    box-shadow: 0px 5px 4px 2px  rgba(0, 0, 0, 0.1)
+
 .empty-state
   width: 95%
   text-align: center
@@ -289,45 +330,3 @@ input:-ms-input-placeholder
       font-size: 16px
   .intro-text
     max-width: 560px
-
-
-
-
-    // EMPTY STATE
-    @-webkit-keyframes rotating /* Safari and Chrome */
-      from
-        -ms-transform: rotateY(0deg)
-        -moz-transform: rotateY(0deg)
-        -webkit-transform: rotateY(0deg)
-        -o-transform: rotateY(0deg)
-        transform: rotateY(0deg)
-
-      to
-        -ms-transform: rotateY(180deg)
-        -moz-transform: rotateY(180deg)
-        -webkit-transform: rotateY(180deg)
-        -o-transform: rotateY(180deg)
-        transform: rotateY(180deg)
-
-
-    @keyframes rotating
-      from
-        -ms-transform: rotateY(0deg)
-        -moz-transform: rotateY(0deg)
-        -webkit-transform: rotateY(0deg)
-        -o-transform: rotateY(0deg)
-        transform: rotateY(0deg)
-
-      to
-        -ms-transform: rotateY(180deg)
-        -moz-transform: rotateY(180deg)
-        -webkit-transform: rotateY(180deg)
-        -o-transform: rotateY(180deg)
-        transform: rotateY(180deg)
-
-    .rotating
-      -webkit-animation: rotating .2s ease-in-out 2s
-      -moz-animation: rotating .2s ease-in-out 2s
-      -ms-animation: rotating .2s ease-in-out 2s
-      -o-animation: rotating .2s ease-in-out 2s
-      animation: rotating .2s ease-in-out 2s

@@ -143,8 +143,17 @@
       </div>
     </div>
   @if($oldResesrvations->count())
+  <div id="pjax-container">
     <div class="bokade-tider">
-      <h4>Historik</h4>
+      <h4>Historik {{ $year != '' ? $year : '' }}</h4>
+      @if($historyYears->count() > 1)
+          <h5>Filtrera efter år</h4>
+        <div class="history-button-group">
+          @foreach($historyYears as $loopYear)
+            <a pjax-link class="button-year {{ $loopYear == $year ? 'active' : '' }}" href="{{ url('/') }}?year={{ $loopYear }}">{{ $loopYear }}</a>
+          @endforeach
+        </div>
+      @endif
       <div class="hr"></div>
       @foreach($oldResesrvations as $reservation)
         <div class="bokad-tid">
@@ -159,6 +168,7 @@
         </div>
       @endforeach
     </div>
+  </div><!-- /#pjax-container  -->
   @else
     <div class="bokade-tider">
       <h4>Historik</h4>
@@ -197,7 +207,11 @@
           </g>
           </svg>
         </div>
-        <p>Det har inte varit någon drabbning på centercourten i år!</p>
+        @if($year != date('Y'))
+          <p>Det var inte någon drabbning på centercourten {{ $year }}!</p>
+        @else
+          <p>Det har inte varit någon drabbning på centercourten i år!</p>
+        @endif
       </div>
     </div>
   @endif
@@ -208,6 +222,7 @@
   <script src="{{ asset('js/moment-with-locales.min.js') }}"></script>
   <script src="{{ asset('js/datedropper.js') }}"></script>
   <script src="{{ asset('js/timedropper.js') }}"></script>
+  <script src="{{ asset('js/jquery.pjax.js') }}"></script>
 
   <script>
     @if(Session::has('restoredReservation') && $restoredReservation = Session::get('restoredReservation'))
@@ -281,6 +296,10 @@
         stopTimeObj.trigger('click');
       }
     })
+
+    $(document).pjax('a[pjax-link]', '#pjax-container',{
+      scrollTo: false
+    });
 
   </script>
 </body>
