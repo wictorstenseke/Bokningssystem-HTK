@@ -28,7 +28,12 @@ $factory->define(App\Reservation::class, function (Faker\Generator $faker) {
 
     $faker = Faker\Factory::create("sv_SE");
 
-    $year   = Carbon::now()->year;
+    // Skapar bara bokningar nuvarande år
+    // $year   = Carbon::now()->year;
+
+    // Skapar bokningar från nuvarande år till och med 3 år gammalt
+    $year   = Carbon::now()->subYears(rand(0,3))->year;
+
     $start  = Carbon::create($year, rand(1, 12), rand(1, 28), rand(1, 24));
     $stop   = clone $start;
 
@@ -36,5 +41,7 @@ $factory->define(App\Reservation::class, function (Faker\Generator $faker) {
         'start' => $start,
         'stop'  => $stop->addHours(rand(1,4)),
         'name'  => $faker->name,
+        'created_at' => $start->subHours(2),
+        'updated_at' => $start->subHours(2),
     ];
 });

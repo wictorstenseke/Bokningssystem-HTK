@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class ReservationSeeder extends Seeder
+class Truncate extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,6 +12,5 @@ class ReservationSeeder extends Seeder
     public function run()
     {
         App\Reservation::truncate();
-        factory(App\Reservation::class, 50)->create();
     }
 }

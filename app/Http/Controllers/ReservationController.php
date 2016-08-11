@@ -16,7 +16,7 @@ class ReservationController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $reservations = Reservation::all();
 
@@ -28,9 +28,28 @@ class ReservationController extends Controller
             return $reservation->stop < Carbon::now();
         })->sortByDesc('start');
 
+        if($request->has('year')){
+            $year = $request->year;
+            $oldResesrvations = $oldResesrvations->filter(function ($reservation) use ($year) {
+                return $reservation->start->format('Y') == $year;
+            });
+        }else{
+            $oldResesrvations = $oldResesrvations->filter(function ($reservation){
+                return $reservation->start->format('Y') == date('Y');
+            });
+            $year = date('Y');
+        }
+
+        $historyYears = $reservations->sortBy('start')->groupBy(function ($reservation)
+        {
+            return $reservation->start->format('Y');
+        })->keys();
+
         return view('index')->with([
             'futureResesrvations'   => $futureResesrvations,
             'oldResesrvations'      => $oldResesrvations,
+            'year'                  => $year,
+            'historyYears'          => $historyYears,
         ]);
     }
 
