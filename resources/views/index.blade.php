@@ -216,6 +216,15 @@
     </div>
   @endif
 
+  <div class="footer">
+    <a href="https://github.com/wictorstenseke/bokningssystem-HTK" target="_blank"><i class="fa fa-github"></i></a>
+    |
+    <a href="mailto:wictor.johansson@gmail.com" target="_blank">Wictor Johansson</a>
+    |
+    <a href="mailto:blomdahl.daniel@gmail.com" target="_blank">Daniel Blomdahl</a>
+  </div>
+
+
   <script src="{{ asset('js/jquery-2.2.4.min.js') }}"></script>
   <script src=//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.js></script>
   <script src="{{ asset('js/functions.js') }}"></script>

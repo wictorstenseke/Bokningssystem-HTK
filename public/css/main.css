@@ -4641,6 +4641,20 @@ input:-ms-input-placeholder {
   100% {
     transform: rotate(-720deg); } }
 
+.footer {
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: center;
+  color: #1d572f;
+  font-size: 14px;
+  font-weight: 300; }
+  .footer a {
+    color: #1d572f;
+    font-size: 14px;
+    font-weight: 400; }
+  .footer a:hover {
+    color: #143c21; }
+
 @media screen and (max-width: 675px) {
   .logotype {
     width: 90px;
