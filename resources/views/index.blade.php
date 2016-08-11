@@ -147,7 +147,7 @@
     <div class="bokade-tider">
       <h4>Historik {{ $year != '' ? $year : '' }}</h4>
       @if($historyYears->count() > 1)
-          <h5>Filtrera efter år</h4>
+          <h5>Välj år att visa</h4>
         <div class="history-button-group">
           @foreach($historyYears as $loopYear)
             <a pjax-link class="button-year {{ $loopYear == $year ? 'active' : '' }}" href="{{ url('/') }}?year={{ $loopYear }}">{{ $loopYear }}</a>
