@@ -13,7 +13,7 @@
   <meta name="theme-color" content="#ffffff">
 
   <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700' rel='stylesheet' type='text/css'>
-  <title>Boka banan | Högelids Tennisklubb</title>
+  <title>Boka banan | Högelids Tennisklubb.se</title>
 
   <link rel="stylesheet" href="{{ asset('css/main.css') }}">
 
