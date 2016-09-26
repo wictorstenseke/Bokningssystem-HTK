@@ -20,3 +20,5 @@ Route::get('/bokningsbekraftelse/{reservation}', 'ReservationController@success'
 
 Route::get('/reservation/softDelete/{reservation}', 'ReservationController@softDelete')->name('reservation.softDelete');
 Route::get('/reservation/restore/{id}', 'ReservationController@restore')->name('reservation.restore');
+
+Route::get('/fake-error/{errorUrl}', 'FakeErrorController@triggerError');

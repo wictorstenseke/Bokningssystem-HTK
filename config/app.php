@@ -156,6 +156,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        // Third party going on here dude
+        Illuminate\Notifications\NotificationServiceProvider::class,
+
     ],
 
     /*
