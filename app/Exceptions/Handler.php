@@ -3,6 +3,9 @@
 namespace App\Exceptions;
 
 use Exception;
+use App\Notifier;
+use App\Notifications\SlackBotErrorNotifier;
+use Illuminate\Support\Facades\Notification;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
@@ -45,6 +48,11 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $e)
     {
+        if (config('app.env') == 'production'){
+            $n = new Notifier;
+            Notification::send($n, new SlackBotErrorNotifier($request, $e));
+        }
+
         return parent::render($request, $e);
     }
 }
