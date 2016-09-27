@@ -7,8 +7,9 @@
 
   <meta property="og:url"                content="http://www.hogelidstennis.se" />
   <meta property="og:title"              content="Boka banan | Högelids Tennisklubb" />
-  <meta property="og:description"        content="Nu kan du boka grusbanan i Siene online!" />
+  <meta property="og:description"        content="Nu kan du boka grusbanan i Siene online via vår nya hemsida!" />
   <meta property="og:image"              content="http://www.hogelidstennis.se/img/hogelids-fb-share.png" />
+  <meta property="og:locale"             content="sv_SE" />
 
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
