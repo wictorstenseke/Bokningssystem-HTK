@@ -49,17 +49,18 @@ $(function() {
   });
 
 
-  $('.tip-button').click(function (e) {
-    var clickThis = $(this);
-    var futureReservationsDiv = clickThis.parent().parent().parent('.bokade-tider');
+  $('[data-send-ajax]').click(function (e) {
+    var clickedElement = $(this);
+    var futureReservationsDiv = clickedElement.parent().parent().parent('.bokade-tider');
+
     $.ajax({
-       url: "/reservation/softDelete/" + $(this).data('reservation-id'),
+       url: "/reservation/softDelete/" + clickedElement.data('reservation-id'),
        success:function(deletedReservation) {
         console.log(deletedReservation);
-        clickThis.parent().hide();
-        clickThis.parent().parent('.bokad-tid').animateCss('zoomOutRight');
+        clickedElement.parent().hide();
+        clickedElement.parent().parent('.bokad-tid').animateCss('zoomOutRight');
         setTimeout(function () {
-          clickThis.parent().parent('.bokad-tid').remove();
+          clickedElement.parent().parent('.bokad-tid').remove();
           console.log('antal: ' + futureReservationsDiv.children('.bokad-tid').length);
           if(futureReservationsDiv.children('.bokad-tid').length == 0){
             $('#empty-state-future-reservations').slideToggle();
