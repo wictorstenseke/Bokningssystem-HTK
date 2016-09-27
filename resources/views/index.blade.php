@@ -13,7 +13,7 @@
   <meta name="theme-color" content="#ffffff">
 
   <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700' rel='stylesheet' type='text/css'>
-  <title>Boka banan | Högelids Tennisklubb.se</title>
+  <title>Boka banan | Högelids Tennisklubb</title>
 
   <link rel="stylesheet" href="{{ asset('css/main.css') }}">
 
@@ -247,7 +247,7 @@
           link += (key.charAt(ltr))
         }
       }
-    document.write("<a href='mailto:"+link+"'>Wictor Johansson</a>")
+    document.write("<a href='mailto:"+link+"'>Wictor Stenseke</a>")
     }
     //-->
     </script><noscript>Sorry, you need Javascript on to email me.</noscript>
