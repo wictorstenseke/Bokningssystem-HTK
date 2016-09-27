@@ -60,7 +60,7 @@
         value="{{ old('start_date') }}"
       >
       <br>
-      <input
+      <input readonly="true"
         type="text"
         id="start"
         name="start_time"
@@ -69,7 +69,7 @@
         value="{{ (old('start_time')) ? old('start_time') : '' }}"
       >
       <br>
-      <input
+      <input readonly="true"
         type="text"
         id="stop"
         name="stop_time"
