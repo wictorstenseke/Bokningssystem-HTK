@@ -60,8 +60,9 @@ class SlackBotErrorNotifier extends Notification
        return (new SlackMessage)
            ->content('Server error '. config('app.url'))
            ->attachment(function ($attachment) {
-                $attachment->title($this->e->getMessage(), $this->request->path())
+                $attachment->title($this->e->getMessage())
                    ->fields([
+                        'Exception' => get_class($this->e),
                         'Url:' => $this->request->url(),
                         'Tid:' => Carbon::now()->format('Y-m-d H:i:s'),
                         'Fil:' => $this->errorFile . ':'.$this->e->getLine(),

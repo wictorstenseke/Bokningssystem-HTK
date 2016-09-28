@@ -8,9 +8,11 @@ use App\Notifications\SlackBotErrorNotifier;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Auth\Access\AuthorizationException;
+use Illuminate\Http\Exception\HttpResponseException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class Handler extends ExceptionHandler
 {
@@ -48,7 +50,7 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $e)
     {
-        if (config('app.env') == 'production'){
+        if (config('app.env') == 'production' && !$e instanceof HttpResponseException && !$e instanceof NotFoundHttpException){
             $n = new Notifier;
             Notification::send($n, new SlackBotErrorNotifier($request, $e));
         }
