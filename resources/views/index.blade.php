@@ -20,6 +20,8 @@
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="theme-color" content="#ffffff">
 
+  <meta name="google-site-verification" content="9-8APSY7uRnwF9fF3_yy4wuL5SsGhJwQPihuuuAtKIc" />
+
   <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700' rel='stylesheet' type='text/css'>
   <title>Boka banan | Högelids Tennisklubb</title>
 
