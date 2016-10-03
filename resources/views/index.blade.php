@@ -5,10 +5,11 @@
   <meta name="_token" content="{{ csrf_token() }}" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <title>Boka banan | Högelids Tennisklubb</title>
   <meta name="description" content="Nu kan du boka grusbanan i Siene online via vår nya hemsida!">
 
   <meta property="og:url"                content="http://www.hogelidstennis.se" />
-  <meta property="og:title"              content="Boka banan | Högelids Tennisklubb" />
+  {{-- <meta property="og:title"              content="Boka banan | Högelids Tennisklubb" /> --}}
   <meta property="og:description"        content="Nu kan du boka grusbanan i Siene online via vår nya hemsida!" />
   <meta property="og:image"              content="http://www.hogelidstennis.se/img/hogelidstennis-fb-share.png" />
   <meta property="og:locale"             content="sv_SE" />
@@ -23,7 +24,6 @@
   <meta name="google-site-verification" content="9-8APSY7uRnwF9fF3_yy4wuL5SsGhJwQPihuuuAtKIc" />
 
   <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700' rel='stylesheet' type='text/css'>
-  <title>Boka banan | Högelids Tennisklubb</title>
 
   <link rel="stylesheet" href="{{ asset('css/main.css') }}">
 
