@@ -35,7 +35,7 @@
     </a>
   </div>
 
-  <h3 style="color:white; font-size: 1.6em; transform:uppercase;text-align: center;margin-bottom: 0.5em;margin-top: 0.5em;">Välkommen till <br> Högelids Tennisklubb!</h3>
+  <h3>Välkommen till <br> Högelids Tennisklubb!</h3>
   <p class="intro-text">Här kan du som är medlem boka speltid på vår grusbana och se andra medlemmars bokade tider.</p>
 
   <div class="cta-button">Boka speltid</div>
@@ -288,7 +288,7 @@
 
 
   <script src="{{ asset('js/jquery-2.2.4.min.js') }}"></script>
-  <script src=//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.js></script>
+  <script src=//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js></script>
   <script src="{{ asset('js/functions.js') }}"></script>
   <script src="{{ asset('js/moment-with-locales.min.js') }}"></script>
   <script src="{{ asset('js/datedropper.js') }}"></script>
