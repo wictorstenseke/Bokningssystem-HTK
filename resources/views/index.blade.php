@@ -28,9 +28,6 @@
   <link rel="stylesheet" href="{{ asset('css/main.css') }}">
 
 </head>
-<style>
-
-</style>
 <body>
   <div class="bildbox">
     <a href="{{ action('ReservationController@index') }}">
