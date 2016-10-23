@@ -25,7 +25,7 @@
       </div>
       <h3>Oops!</h3>
       <p class="intro-text">Något verkar ha gå snett. Klicka på knappen nedan för att komma tillbaka startsidan.</p>
-      <a href="{{ action('ReservationController@index') }}" class="button" style="margin-bottom: 30px;">Till startsidan</a>
+      <a href="{{ action('ReservationController@index') }}" class="cta-button" style="margin-bottom: 30px;">Till startsidan</a>
 
       <div class="footer">
         <a href="https://github.com/wictorstenseke/bokningssystem-HTK" target="_blank"><i class="fa fa-github"></i></a>
