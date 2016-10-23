@@ -4347,6 +4347,14 @@ a {
   font-weight: 700;
   color: #fff; }
 
+h3 {
+  color: #ffffff;
+  font-size: 1.6em;
+  transform: uppercase;
+  text-align: center;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em; }
+
 h5 {
   font-size: 16px;
   margin: 5px 0;
