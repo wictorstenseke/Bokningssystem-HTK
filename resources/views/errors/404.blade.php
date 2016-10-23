@@ -18,6 +18,8 @@
       <link rel="stylesheet" href="{{ asset('css/main.css') }}">
       </head>
     <body>
+      <section class="error-page">
 
+      </section>
     </body>
 </html>
