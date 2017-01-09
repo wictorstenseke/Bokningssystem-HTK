@@ -98,7 +98,7 @@
   </div>
 
     <div class="bokade-tider">
-      <h4>Bokade tider 2017</h4>
+      <h4>Bokade tider {{ $now->format('Y/m/d') }}</h4>
       <div class="hr"></div>
       @if($futureResesrvations->count())
         @foreach($futureResesrvations as $reservation)
