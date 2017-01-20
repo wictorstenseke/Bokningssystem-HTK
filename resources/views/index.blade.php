@@ -231,6 +231,16 @@
     </div>
   @endif
 
+  <div class="kontaktsektion">
+    <h2>Kontakt</h2>
+    <div class="kontaktinfo">
+      <h4>Ordförande:</h4>
+      <p>Albin Andreasson: 073 - 56 56 56</p>
+      <h4>Banansvarig:</h4>
+      <p>Carl Quint: 073 - 56 56 56</p>
+    </div>
+  </div>
+
   <div class="footer">
     <a href="https://github.com/wictorstenseke/bokningssystem-HTK" target="_blank"><i class="fa fa-github"></i></a>
     |

@@ -14,3 +14,8 @@ var elixir = require('laravel-elixir');
 elixir(function(mix) {
     mix.sass('main.sass');
 });
+elixir(function(mix) {
+  mix.browserSync({
+    proxy: 'htk.dev'
+  });
+});
