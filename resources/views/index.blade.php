@@ -233,11 +233,12 @@
 
   <div class="kontaktsektion">
     <h2>Kontakt</h2>
+    <p class="kontakt-intro">Har du frågor om medlemskap eller andra frågor går det bra att kontakta nedanstående.</p>
     <div class="kontaktinfo">
       <h4>Ordförande:</h4>
-      <p>Albin Andreasson: 073 - 56 56 56</p>
+      <p>Albin Andreasson: 073 - 646 37 15</p>
       <h4>Banansvarig:</h4>
-      <p>Carl Quint: 073 - 56 56 56</p>
+      <p>Carl Quint: 073 - 096 28 10</p>
     </div>
   </div>
 

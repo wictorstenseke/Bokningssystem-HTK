@@ -334,8 +334,11 @@ input:-ms-input-placeholder
   background-color: $main-green
   margin: 25px auto
   max-width: 500px
-  padding: 40px
+  padding: 20px
   border-radius: 10px
+  .kontakt-intro
+    text-align: center
+    font-size: 15px
   h2
     text-align: center
     margin: 15px 0
@@ -349,10 +352,10 @@ input:-ms-input-placeholder
   p
     color: $white
     font-size: 18px
-    margin-top: 0px
+    margin-top: 6px
 
 .kontaktinfo
-
+  padding: 0 40px 0 40px
 
 .footer
   margin-bottom: 20px
@@ -379,3 +382,11 @@ input:-ms-input-placeholder
       font-size: 16px
   .intro-text
     max-width: 560px
+
+@media screen and (max-width: 474px)
+  .kontaktsektion
+    padding: 10px
+    .kontakt-intro
+      font-size: 14px
+  .kontaktinfo
+    padding: 0 15px 0 15px
