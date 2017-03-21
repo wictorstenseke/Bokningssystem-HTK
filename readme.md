@@ -2,7 +2,7 @@
 
 # Högelids Tennisklubb - Bokningssystem
 
-### [htk.blomdahldaniel.se](http://htk.blomdahldaniel.se/)
+### [www.hogelidstennis.nu](http://hogelidstennis.nu/)
 
 ### Databas
 Default så skapas bokningar som kan vara upp till 3 år gamla.
