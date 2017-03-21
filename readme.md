@@ -2,7 +2,7 @@
 
 # Högelids Tennisklubb - Bokningssystem
 
-### [www.hogelidstennis.nu](http://hogelidstennis.nu/)
+### [www.hogelidstennis.se](http://hogelidstennis.se/)
 
 ### Databas
 Default så skapas bokningar som kan vara upp till 3 år gamla.
