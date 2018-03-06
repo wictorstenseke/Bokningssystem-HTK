@@ -98,7 +98,7 @@
   </div>
 
     <div class="bokade-tider">
-      <h4>Bokade tider 2017</h4>
+      <h4>Bokade tider <?php echo date("Y"); ?></h4>
       <div class="hr"></div>
       @if($futureResesrvations->count())
         @foreach($futureResesrvations as $reservation)
