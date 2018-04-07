@@ -231,6 +231,21 @@
     </div>
   @endif
 
+  <div class="bokade-tider">
+    <h2>Information</h2>
+    <div class="kontaktinfo" style="line-height: 1.5;">
+      <h4 style="text-align: left;">Förhållningsregler</h4>
+      <p style="margin-top: 4px;">Vid spel på banan används skor med släta sulor.</p>
+      <p>Släpper underlaget lägger vi tillbaka grusmassan och stampar till så att hålor i banan undviks.</p>
+      <p>Efter spel skall hela banan sopas av med de breda borstarna och därefter linjerna med linjeborstarna.</p>
+      <h4 style="text-align: left;">Om Högelids Tennisklubb</h4>
+      <p style="margin-top: 4px;">Föreningen, som har sin hemvist i Siene, bildades 1984. Våren 1985 påbörjades arbetet med att anlägga en tennisbana, som invigdes den 10 augusti 1985.
+          Klubben började som en andelsförening men några år in på 2000-talet slopade man andelarna och började fritt ta in medlemmar. 2017 hade klubben 61 medlemmar.</p>
+          <p>Den egentliga tennisverksamheten, som klubbtävlingar etc, är numera sparsam.
+          Man har dock som ambition att hålla tennisbanan i ett så gott skick som möjligt.</p>
+    </div>
+  </div>
+
   <div class="kontaktsektion">
     <h2>Kontakt</h2>
     <p class="kontakt-intro">Har du frågor om medlemskap eller andra frågor går det bra att kontakta nedanstående.</p>
