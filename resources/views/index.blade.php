@@ -38,7 +38,7 @@
   <h3>Välkommen till <br> Högelids Tennisklubb!</h3>
   <p class="intro-text">Här kan du som är medlem boka speltid på vår grusbana och se andra medlemmars bokade tider.</p>
 
-  <div class="cta-button">Boka speltid</div>
+  {{-- <div class="cta-button">Boka speltid</div> --}}
 
   <!-- Modal -->
   <div class="reservation-modal" {!! ($errors->any()) ? 'style="display: block;"' : '' !!}>
@@ -153,8 +153,10 @@
           </g>
           </svg>
         </div>
-        <p class="bold-text">banan är ledig!</p>
-        <p>Det finns inga bokade tider just nu.</p>
+        {{-- <p class="bold-text">banan är ledig!</p> --}}
+        <p class="bold-text">Snart</p>
+        {{-- <p>Det finns inga bokade tider just nu.</p> --}}
+        <p>Banan har tyvärr inte öppnat än!</p>
       </div>
     </div>
   @if($oldResesrvations->count())
@@ -231,15 +233,25 @@
     </div>
   @endif
 
-  <div class="bokade-tider">
-    <h2>Information</h2>
-    <div class="kontaktinfo" style="line-height: 1.5;">
-      <h4 style="text-align: left;">Förhållningsregler</h4>
+  {{-- <div class="bokade-tider">
+    <h2>Klubbtröja</h2>
+    <div class="kontaktinfo">
       <p style="margin-top: 4px;">Vid spel på banan används skor med släta sulor.</p>
       <p>Släpper underlaget lägger vi tillbaka grusmassan och stampar till så att hålor i banan undviks.</p>
       <p>Efter spel skall hela banan sopas av med de breda borstarna och därefter linjerna med linjeborstarna.</p>
+      <a href="#" class="boka-pike">Beställ klubbtröja</a>
+    </div>
+  </div> --}}
+
+  <div class="bokade-tider">
+    <h2>Information</h2>
+    <div class="kontaktinfo">
+      <h4 style="text-align: left;">Förhållningsregler</h4>
+      <p style="margin-top: 2px;">Vid spel på banan används skor med släta sulor.</p>
+      <p>Släpper underlaget lägger vi tillbaka grusmassan och stampar till så att hålor i banan undviks.</p>
+      <p>Efter spel skall hela banan sopas av med de breda borstarna och därefter linjerna med linjeborstarna.</p>
       <h4 style="text-align: left;">Om Högelids Tennisklubb</h4>
-      <p style="margin-top: 4px;">Föreningen, som har sin hemvist i Siene, bildades 1984. Våren 1985 påbörjades arbetet med att anlägga en tennisbana, som invigdes den 10 augusti 1985.
+      <p style="margin-top: 2px;">Föreningen, som har sin hemvist i Siene, bildades 1984. Våren 1985 påbörjades arbetet med att anlägga en tennisbana, som invigdes den 10 augusti 1985.
           Klubben började som en andelsförening men några år in på 2000-talet slopade man andelarna och började fritt ta in medlemmar. 2017 hade klubben 61 medlemmar.</p>
           <p>Den egentliga tennisverksamheten, som klubbtävlingar etc, är numera sparsam.
           Man har dock som ambition att hålla tennisbanan i ett så gott skick som möjligt.</p>

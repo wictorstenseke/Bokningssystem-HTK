@@ -3523,7 +3523,7 @@ button.toast-close-button { padding: 0; cursor: pointer; background: transparent
 
 html, body, .pure-g [class*="pure-u"] { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: "roboto condensed", sans-serif; font-size: 18px; background-color: #2A7D44; padding: 5px; }
 
-p { line-height: 1.5; }
+p { line-height: 1.4; }
 
 a { text-transform: uppercase; text-decoration: none; font-weight: 700; color: #fff; }
 
@@ -3541,11 +3541,13 @@ h5 { font-size: 16px; margin: 5px 0; text-transform: uppercase; text-align: cent
 
 .intro-text { text-align: center; color: #FFF; max-width: 680px; margin: 0px auto 25px auto; font-size: 16px; }
 
-.cta-button { padding: 20px 50px; background-color: #F1E334; display: block; margin: 0 auto; width: 250px; border-radius: 100px; cursor: pointer; text-align: center; font-size: 20px; text-transform: uppercase; text-decoration: none; font-weight: 700; color: #fff; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); -webkit-transition: all, 0.2s; -moz-transition: all, 0.2s; transition: all, 0.2s; }
+.cta-button, .boka-pike { padding: 20px 50px; background-color: #F1E334; display: block; margin: 0 auto; width: 250px; border-radius: 100px; cursor: pointer; text-align: center; font-size: 20px; text-transform: uppercase; text-decoration: none; font-weight: 700; color: #fff; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); -webkit-transition: all, 0.2s; -moz-transition: all, 0.2s; transition: all, 0.2s; }
 
-.cta-button:hover { box-shadow: 0px 5px 4px 2px rgba(0, 0, 0, 0.1); }
+.cta-button:hover, .boka-pike:hover { box-shadow: 0px 5px 4px 2px rgba(0, 0, 0, 0.1); }
 
-.cta-button:active { background-color: #e2d310; }
+.cta-button:active, .boka-pike:active { background-color: #e2d310; }
+
+.boka-pike { width: 350px; }
 
 .bokade-tider { display: block; background-color: #194B29; margin: 25px auto; max-width: 720px; padding: 20px; border-radius: 10px; }
 
@@ -3707,7 +3709,7 @@ input:-ms-input-placeholder { color: #848E87 !important; font-style: italic; tex
 
 .kontaktsektion { display: block; background-color: #194B29; margin: 25px auto; max-width: 500px; padding: 20px; border-radius: 10px; }
 
-.kontaktsektion .kontakt-intro { text-align: center; font-size: 15px; }
+.kontaktsektion .kontakt-intro { text-align: center; font-size: 15px; max-width: 300px; margin: 12px auto; }
 
 .kontaktsektion h4 { font-size: 20px; margin: 5px 0; text-transform: uppercase; color: #ffffff; }
 
