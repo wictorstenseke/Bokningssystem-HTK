@@ -233,15 +233,15 @@
     </div>
   @endif
 
-  {{-- <div class="bokade-tider">
+  <div class="bokade-tider">
+    <img src="{{ asset('img/hogelids-pike.jpg') }}" class="pike">
     <h2>Klubbtröja</h2>
     <div class="kontaktinfo">
-      <p style="margin-top: 4px;">Vid spel på banan används skor med släta sulor.</p>
-      <p>Släpper underlaget lägger vi tillbaka grusmassan och stampar till så att hålor i banan undviks.</p>
-      <p>Efter spel skall hela banan sopas av med de breda borstarna och därefter linjerna med linjeborstarna.</p>
-      <a href="#" class="boka-pike">Beställ klubbtröja</a>
+      <p style="margin-top: 4px;">Passa på att beställa en pikéskjorta med broderat klubbemblem.</p>
+      <p>Kostnad 250kr/pikéskjorta.</p>
+      <a href="https://goo.gl/forms/xsw3taXIQXD6F5BX2" target="_blank" class="boka-pike">Beställ klubbtröja</a>
     </div>
-  </div> --}}
+  </div>
 
   <div class="bokade-tider">
     <h2>Information</h2>

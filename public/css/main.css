@@ -3729,6 +3729,8 @@ input:-ms-input-placeholder { color: #848E87 !important; font-style: italic; tex
 
 .footer a:hover { color: #143c21; }
 
+.pike { width: 100%; max-width: 475px; margin: 0 auto; display: block; }
+
 @media screen and (max-width: 675px) { .logotype { width: 90px; margin: 10px auto 19px auto; }
   .bokade-tider p { font-size: 16px; }
   .intro-text { max-width: 560px; } }
