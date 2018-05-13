@@ -251,8 +251,8 @@
       <p>Släpper underlaget lägger vi tillbaka grusmassan och stampar till så att hålor i banan undviks.</p>
       <p>Efter spel skall hela banan sopas av med de breda borstarna och därefter linjerna med linjeborstarna.</p>
       <h4 style="text-align: left; margin: 24px 0 4px 0;">Om Högelids Tennisklubb</h4>
-      <p style="margin-top: 2px;">Föreningen, som har sin hemvist i Siene, bildades 1984. Våren 1985 påbörjades arbetet med att anlägga en tennisbana, som invigdes den 10 augusti 1985.
-          Klubben började som en andelsförening men några år in på 2000-talet slopade man andelarna och började fritt ta in medlemmar. 2017 hade klubben 61 medlemmar.</p>
+      <p style="margin-top: 2px;">Föreningen, som har sin hemvist i Siene, bildades 1984. Våren 1985 påbörjades arbetet med att anlägga en tennisbana, som invigdes den 10 augusti 1985.</p>
+          <p>Klubben började som en andelsförening men några år in på 2000-talet slopade man andelarna och började fritt ta in medlemmar. 2017 hade klubben 61 medlemmar.</p>
           <p>Den egentliga tennisverksamheten, som klubbtävlingar etc, är numera sparsam.
           Man har dock som ambition att hålla tennisbanan i ett så gott skick som möjligt.</p>
     </div>
