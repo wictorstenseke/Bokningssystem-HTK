@@ -1,7 +1,7 @@
-<img src="http://htk.blomdahldaniel.se/img/htk-logo.svg" width="200">
-# Högelids Tennisklubb - Bokningssystem
+<img src="https://www.hogelidstennis.se/img/htk-logo.svg" width="200">
+## Högelids Tennisklubb - Bokningssystem
 
-### [htk.blomdahldaniel.se](http://htk.blomdahldaniel.se/)
+### [www.hogelidstennis.se](https://www.hogelidstennis.se/)
 
 ### Databas
 Default så skapas bokningar som kan vara upp till 3 år gamla.
