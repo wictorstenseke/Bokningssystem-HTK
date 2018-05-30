@@ -6,11 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Boka banan | Högelids Tennisklubb</title>
-  <meta name="description" content="Nu kan du boka grusbanan i Siene online via vår nya hemsida!">
+  <meta name="description" content="Nu kan du boka grusbanan i Siene online via vår hemsida!">
 
   <meta property="og:url"                content="http://www.hogelidstennis.se" />
   {{-- <meta property="og:title"              content="Boka banan | Högelids Tennisklubb" /> --}}
-  <meta property="og:description"        content="Nu kan du boka grusbanan i Siene online via vår nya hemsida!" />
+  <meta property="og:description"        content="Nu kan du boka grusbanan i Siene online via vår hemsida!" />
   <meta property="og:image"              content="http://www.hogelidstennis.se/img/hogelidstennis-fb-share.png" />
   <meta property="og:locale"             content="sv_SE" />
 
