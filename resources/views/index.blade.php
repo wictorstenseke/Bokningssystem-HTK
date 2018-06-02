@@ -233,7 +233,7 @@
     </div>
   @endif
 
-  <div class="bokade-tider">
+  {{-- <div class="bokade-tider">
     <img src="{{ asset('img/hogelids-pike.jpg') }}" class="pike">
     <h2>Klubbtröja</h2>
     <div class="kontaktinfo">
@@ -241,7 +241,7 @@
       <p>Kostnad 250kr/pikéskjorta.</p>
       <a href="https://goo.gl/forms/xsw3taXIQXD6F5BX2" target="_blank" class="boka-pike">Beställ klubbtröja</a>
     </div>
-  </div>
+  </div> --}}
 
   <div class="bokade-tider">
     <h2>Information</h2>
