@@ -3625,7 +3625,7 @@ input:-ms-input-placeholder { color: #848E87 !important; font-style: italic; tex
 
 .empty-state .tennis-boll { display: block; margin: 0px auto 10px auto; width: 90px; }
 
-.empty-state .tennis-boll #ball { -webkit-animation: snurr 10s ease-in-out infinite; -moz-animation: snurr 10s ease-in-out infinite; animation: snurr 10s ease-in-out infinite; transform-origin: 50% 50%; }
+.empty-state .tennis-boll #ball { -webkit-animation: snurr 10s ease-in-out infinite; -moz-animation: snurr 10s ease-in-out infinite; animation: snurr 10s ease-in-out infinite; transform-origin: 33% 61%; }
 
 .empty-state p { margin: 0px 0; }
 
