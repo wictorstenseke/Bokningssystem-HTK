@@ -38,7 +38,7 @@
   <h3>Välkommen till <br> Högelids Tennisklubb!</h3>
   <p class="intro-text">Här kan du som är medlem boka speltid på vår grusbana och se andra medlemmars bokade tider.</p>
 
-  {{-- <div class="cta-button">Boka speltid</div> --}}
+  <div class="cta-button">Boka speltid</div>
 
   <!-- Modal -->
   <div class="reservation-modal" {!! ($errors->any()) ? 'style="display: block;"' : '' !!}>
@@ -154,10 +154,10 @@
           </g>
           </svg>
         </div>
-        {{-- <p class="bold-text">Banan är ledig!</p> --}}
-        {{-- <p>Det finns inga bokade tider just nu.</p> --}}
-        <p class="bold-text">Säsongsstängt</p>
-        <p>Banan har tyvärr inte öppnat än!</p>
+        <p class="bold-text">Banan är ledig!</p> --}}
+        <p>Det finns inga bokade tider just nu.</p>
+        {{-- <p class="bold-text">Säsongsstängt</p> --}}
+        {{-- <p>Banan har tyvärr inte öppnat än!</p> --}}
       </div>
     </div>
   @if($oldResesrvations->count())
