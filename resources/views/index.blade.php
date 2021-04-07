@@ -244,10 +244,6 @@
     </div>
   </div> --}}
 
-  <div class="arsmote-link">
-    <h2>testPush</h2>
-  </div>
-
   <div class="bokade-tider">
     <h2>Information</h2>
     <div class="kontaktinfo">
