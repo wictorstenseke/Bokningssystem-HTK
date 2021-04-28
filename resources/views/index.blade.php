@@ -38,16 +38,16 @@
   <h3>Välkommen till <br> Högelids Tennisklubb!</h3>
   <p class="intro-text">Här kan du som är medlem boka speltid på vår grusbana och se andra medlemmars bokade tider.</p>
 
-  <div class="kontaktsektion">
+  {{-- <div class="kontaktsektion">
     <h2>Årsmöte 28 april 19.00</h2>
     <div class="kontaktinfo">
       <p style="margin-top: 4px;">Klicka på knappen för att delta i årsmötet online. Det skall fungera på både dator och telefon.</p>
       <p>Om något krånglar går det bra att ringa Wictor på tel. 076 899 54 35.</p>
       <a href="https://meet.jit.si/hogelidstennis2021" target="_blank" class="boka-pike">Gå till årsmöte</a>
     </div>
-  </div>
+  </div> --}}
 
-  {{-- <div class="cta-button">Boka speltid</div> --}}
+  <div class="cta-button">Boka speltid</div>
 
   <!-- Modal -->
   <div class="reservation-modal" {!! ($errors->any()) ? 'style="display: block;"' : '' !!}>
