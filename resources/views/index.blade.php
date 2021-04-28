@@ -98,7 +98,16 @@
     </form>
   </div>
 
-    <div class="bokade-tider">
+  <div class="bokade-tider">
+    <h2>Årsmöte 28 april kl. 20.00</h2>
+    <div class="kontaktinfo">
+      <p style="margin-top: 4px;">Klicka på knappen för att delta i årsmötet online. Det skall fungera på både dator och telefon.</p>
+      <p>Om något krånglar går det bra att ringa Wictor på 0768 99 54 35</p>
+      <a href="https://meet.jit.si/hogelidstennis2021" target="_blank" class="boka-pike">Gå till årsmöte</a>
+    </div>
+  </div>
+  
+  <div class="bokade-tider">
       <h4>Bokade tider <?php echo date("Y"); ?></h4>
       <div class="hr"></div>
       @if($futureResesrvations->count())
