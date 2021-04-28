@@ -38,7 +38,7 @@
   <h3>Välkommen till <br> Högelids Tennisklubb!</h3>
   <p class="intro-text">Här kan du som är medlem boka speltid på vår grusbana och se andra medlemmars bokade tider.</p>
 
-  <div class="kontakt-sektion">
+  <div class="kontaktsektion">
     <h2>Årsmöte 28 april 20.00</h2>
     <div class="kontaktinfo">
       <p style="margin-top: 4px;">Klicka på knappen för att delta i årsmötet online. Det skall fungera på både dator och telefon.</p>
