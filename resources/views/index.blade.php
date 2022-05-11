@@ -38,7 +38,7 @@
   <h3>Välkommen till <br> Högelids Tennisklubb!</h3>
   <p class="intro-text">Här kan du som är medlem boka speltid på vår grusbana och se andra medlemmars bokade tider.</p>
 
-  <div class="kontaktsektion" style="padding-bottom: 44px;">
+  <div class="kontaktsektion" style="margin-bottom: 44px;">
     <h2>Anmälan till Högelids Tennisstege</h2>
     <div class="kontaktinfo">
       <p style="margin-top: 4px;">Anmäl dig till stegen genom att ange dina uppgifter i formuläret så kommer det mer information senare.</p>
