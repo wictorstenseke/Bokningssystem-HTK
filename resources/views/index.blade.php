@@ -258,7 +258,7 @@
     <div class="kontaktinfo">
       <p style="margin-top: 2px;">Anmäl dig till Högelids Tennisklubbs stege år 2022. Utmana andra medlemmar i sommar och få chansen att spela mot nya utmanare.</p>
       <h4 style="text-align: left; margin: 16px 0 4px 0;">Så fungerar stegen:</h4>
-      <p style="margin-top: 2px;">Man tar kontakt med (mer information om var man hittar kontaktuppgifter kommer) motspelaren närmast över eller två placeringar upp i tabellen och föreslår en tid.</p>
+      <p style="margin-top: 2px;">Man tar kontakt med motspelaren närmast över eller två placeringar upp i tabellen och föreslår en tid. Mer information om var man hittar kontaktuppgifter till motspelare kommer i ett senare skede efter anmälan.</p>
       <p>Den utmanade kan inte neka att ställa upp, men däremot ha synpunkt på matchtid. När ni bestämt en lämplig speltid bokar ni banan. Man kan inte anta en ny utmaning förrän den förra matchen är spelad.</p>
       <p>Vid vinst flyttas utmanaren upp till den utmanades position, som alltså flyttas ned en position tillsammans med samtliga spelare under på stegen. Om den utmanade segrar sker ingenting. </p>
       <h4 style="text-align: left; margin: 24px 0 4px 0;">Anmälan sker online:</h4>
