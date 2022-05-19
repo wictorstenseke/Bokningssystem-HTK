@@ -38,14 +38,14 @@
   <h3>Välkommen till <br> Högelids Tennisklubb!</h3>
   <p class="intro-text">Här kan du som är medlem boka speltid på vår grusbana och se andra medlemmars bokade tider.</p>
 
-  <div class="kontaktsektion" style="margin-bottom: 64px;">
+  {{-- <div class="kontaktsektion" style="margin-bottom: 64px;">
     <h2>Anmälan till Högelids Tennisstege</h2>
     <div class="kontaktinfo">
       <p style="margin-top: 4px;">Anmäl dig till stegen genom att ange dina uppgifter i formuläret så kommer det mer information senare.</p>
       <p>Om något krånglar går det bra att ringa Wictor på tel. 076 899 54 35.</p>
       <a href="https://forms.gle/UBGZdxFvJ4YKySGe9" target="_blank" class="boka-pike">Gå till anmälan</a>
     </div>
-  </div>
+  </div> --}}
 
   <div class="cta-button">Boka speltid</div>
 
@@ -252,6 +252,21 @@
       <a href="https://goo.gl/forms/xsw3taXIQXD6F5BX2" target="_blank" class="boka-pike">Beställ klubbtröja</a>
     </div>
   </div> --}}
+
+  <div class="bokade-tider">
+    <h2>Högelids TK Stege 2022</h2>
+    <div class="kontaktinfo">
+      <p style="margin-top: 2px;">Anmäl dig till Högelids Tennisklubbs stege år 2022. Utmana andra medlemmar i sommar och få chansen att spela mot nya utmanare.</p>
+      <h4 style="text-align: left; margin: 16px 0 4px 0;">Så fungerar stegen:</h4>
+      <p style="margin-top: 2px;">Man tar kontakt med (mer information om var man hittar kontaktuppgifter kommer) motspelaren närmast över eller två placeringar upp i tabellen och föreslår en tid.</p>
+      <p>Den utmanade kan inte neka att ställa upp, men däremot ha synpunkt på matchtid. När ni bestämt en lämplig speltid bokar ni banan. Man kan inte anta en ny utmaning förrän den förra matchen är spelad.</p>
+      <p>Vid vinst flyttas utmanaren upp till den utmanades position, som alltså flyttas ned en position tillsammans med samtliga spelare under på stegen. Om den utmanade segrar sker ingenting. </p>
+      <h4 style="text-align: left; margin: 24px 0 4px 0;">Anmälan sker online:</h4>
+      <p style="margin-top: 2px;">Anmäl dig genom att fylla i namn och e-post. Mer information kommer skickas ut till alla anmälda spelare i ett senare skede. Justering av tabellen kommer också att ske online.</p>
+      <p>Om något krånglar går det bra att ringa Wictor på tel. 076 899 54 35.</p>
+      <a href="https://forms.gle/UBGZdxFvJ4YKySGe9" target="_blank" class="boka-pike">Gå till anmälan</a>
+    </div>
+  </div>
 
   <div class="bokade-tider">
     <h2>Information</h2>
