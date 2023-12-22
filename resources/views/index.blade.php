@@ -253,7 +253,7 @@
     </div>
   </div> --}}
 
-  <div class="bokade-tider">
+  {{-- <div class="bokade-tider">
     <h2>Högelids TK Stege 2022</h2>
     <div class="kontaktinfo">
       <p style="margin-top: 2px;">Anmäl dig till Högelids Tennisklubbs stege år 2022. Utmana andra medlemmar i sommar och få chansen att spela mot nya utmanare.</p>
@@ -266,7 +266,7 @@
       <p>Om något krånglar går det bra att ringa Wictor på tel. 076 899 54 35.</p>
       <a href="https://forms.gle/UBGZdxFvJ4YKySGe9" target="_blank" class="boka-pike">Gå till anmälan</a>
     </div>
-  </div>
+  </div> --}}
 
   <div class="bokade-tider">
     <h2>Information</h2>
