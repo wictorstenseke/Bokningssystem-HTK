@@ -102,7 +102,7 @@
         value="{{ old('name') }}"
       >
       <br>
-      <p style="margin-top: 12px; margin-bottom: -8px; opacity: 0.5;font-style: italic; font-size: 13px;">Har du dubbelkollat att tiden är ledig?</p>
+      <p style="margin-top: 12px; margin-bottom: -8px; opacity: 0.5;font-style: italic; font-size: 13px;">Har du kollat att tiden är ledig?</p>
       <input type="submit" value="Bekräfta bokning" class="submit-button">
     </form>
   </div>
